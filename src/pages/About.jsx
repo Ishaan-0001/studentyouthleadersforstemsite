@@ -1,14 +1,14 @@
 import React from "react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
 
 const FOUNDERS = [
-  { slot: "Slot #8", name: "Ishaan Pradhan", quote: "I've always thought of myself as lucky for being curious about the sciences. More people deserve the joy of feeling curious, and SY-STEM is my way of helping them." },
-  { slot: "Slot #9", name: "Ayush Ayyagari", quote: "SY-STEM is my way of sharing the love for learning I've always carried. Too many bright minds are stifled by the fact that their education is boring. I want to change that." },
-  { slot: "Slot #10", name: "Tanmay Jain", quote: "My parents always stuck me in an after-school program that just had me sitting around and doing nothing. SY-STEM is everything I would have wanted in an after-school program." },
-  { slot: "Slot #11", name: "Om Anish Kadiyam", quote: "The way I was taught never sat right with me. Listening to someone ramble on and on... I wanted to learn by doing. SY-STEM is my answer for kids like me." },
+  { name: "Ishaan Pradhan", quote: "I've always thought of myself as lucky for being curious about the sciences. More people deserve the joy of feeling curious, and SY-STEM is my way of helping them." },
+  { name: "Ayush Ayyagari", quote: "SY-STEM is my way of sharing the love for learning I've always carried. Too many bright minds are stifled by the fact that their education is boring. I want to change that." },
+  { name: "Tanmay Jain", quote: "My parents always stuck me in an after-school program that just had me sitting around and doing nothing. SY-STEM is everything I would have wanted in an after-school program." },
+  { name: "Om Anish Kadiyam", quote: "The way I was taught never sat right with me. Listening to someone ramble on and on... I wanted to learn by doing. SY-STEM is my answer for kids like me." },
 ];
 
 export default function About() {
@@ -31,8 +31,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              {/* IMAGE SLOT #6 — About hero: team or founders photo */}
-              <ImagePlaceholder slot="Slot #6" label="About Hero — students or founders in an active learning environment" ratio="portrait" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/0e212b142_IMG_4761.jpg" alt="Student working at a glue gun during a STEM lab" className="w-full h-96 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -57,8 +56,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              {/* IMAGE SLOT #7 — group volunteers at a lab */}
-              <ImagePlaceholder slot="Slot #7" label="By Students — group of student volunteers running a lab" ratio="landscape" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/0d8f2f9b8_IMG_4834.jpg" alt="Students in an Innovation Zone classroom during a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -96,9 +94,10 @@ export default function About() {
             {FOUNDERS.map((f, i) => (
               <Reveal key={f.name} delay={(i % 2) * 0.1}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F8FAF9] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#52B788]/40 sm:flex-row">
-                  {/* IMAGE SLOTS #8–11 — founder portraits (active environments, whiteboards/lab equipment) */}
-                  <div className="sm:w-2/5">
-                    <ImagePlaceholder slot={f.slot} label={`Founder — ${f.name}`} ratio="square" className="h-full rounded-none" />
+                  <div className="sm:w-2/5 bg-[#2D6A4F]/10 flex items-center justify-center p-8">
+                    <div className="grid h-20 w-20 place-items-center rounded-full bg-[#2D6A4F] text-white font-display text-2xl font-bold">
+                      {f.name.split(" ").map(n => n[0]).join("")}
+                    </div>
                   </div>
                   <div className="flex flex-1 flex-col justify-center p-7">
                     <h3 className="font-display text-xl font-bold tracking-tight text-[#2D6A4F]">{f.name}</h3>

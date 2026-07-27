@@ -1,5 +1,5 @@
 import React from "react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
@@ -25,8 +25,7 @@ export default function Labs() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              {/* IMAGE SLOT — Our Labs hero */}
-              <ImagePlaceholder slot="Slot #A" label="Our Labs — children working on an open-ended STEM activity at a table" ratio="landscape" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/43665f118_IMG_4836.jpg" alt="Students exploring supplies in a STEM classroom" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -49,12 +48,12 @@ export default function Labs() {
           </Reveal>
           <div className="mt-16 grid gap-10 md:grid-cols-2">
             {[
-              { slot: "Slot #B", label: "Lab Activity — building and experimenting", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
-              { slot: "Slot #C", label: "Lab Activity — student volunteer guiding a small group", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
+              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8293cb680_IMG_4837.jpg", alt: "Students cutting and building at a lab table", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
+              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d1aab5f00_IMG_4751.jpg", alt: "Student volunteer leading a small group", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-[#F8FAF9] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#52B788]/40">
-                  <ImagePlaceholder slot={item.slot} label={item.label} ratio="landscape" className="rounded-none" />
+                  <Image src={item.img} alt={item.alt} className="w-full h-56 rounded-none" fittingType="fill" />
                   <div className="p-7">
                     <h3 className="font-display text-xl font-bold tracking-tight text-[#2D6A4F]">{item.title}</h3>
                     <p className="mt-3 text-[15px] leading-relaxed text-[#555]">{item.body}</p>

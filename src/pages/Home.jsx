@@ -1,27 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MapPin, ArrowRight } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
 
 const PILLARS = [
 {
-  slot: "Slot #3",
-  label: "Pillar Image — Student-Built Leadership (student volunteer teaching)",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ca553d59a_IMG_4759.jpg",
+  alt: "Student volunteer leading a STEM group discussion",
   title: "Student-Built Leadership",
   body: "SY-STEM is led by local student leaders. Our volunteers reach out to venues, tirelessly create curriculums and activities, and get all the supplies needed for our labs. The benefit of having our volunteers still in school is that they can see things from a learner's perspective, and teach like they want to be taught."
 },
 {
-  slot: "Slot #4",
-  label: "Pillar Image — Limitless Creativity (kids building an open-ended project)",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/34e47966a_IMG_4764.jpg",
+  alt: "Kids building an open-ended cardboard project",
   title: "Limitless Creativity",
   body: "We ensure that there is no one way to complete any lab. No two labs should feel the same, and neither should two students' experiences of the same lab. Each lab is crafted with creativity in mind, such that students can truly feel that their success is theirs — not the directions'."
 },
 {
-  slot: "Slot #5",
-  label: "Pillar Image — Sparking Curiosity (joyful engagement in a lab)",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/b6f2d05dd_IMG_4850.jpg",
+  alt: "Students joyfully presenting a paper airplane experiment",
   title: "Sparking Curiosity Through Fun",
   body: "There is only so much any program or school can do to further a student's education in STEM. That's why we don't try to teach your child everything about STEM — we get them interested in it instead. We pack our labs with flexible programming and engaging activities to ensure your children enjoy their experience, building a love for STEM that will stay with them for life."
 }];
@@ -57,8 +57,7 @@ export default function Home() {
           </div>
           <div className="relative px-5 pb-12 lg:px-10 lg:pb-28">
             <Reveal delay={0.15}>
-              {/* IMAGE SLOT #1 — Hero: child engaged in a lab activity. Replace with <img src="..." className="h-full w-full object-cover" /> */}
-              <ImagePlaceholder slot="Slot #1" label="Hero Image — child engaged in a lab activity (close-up of hands connecting a circuit, shallow depth of field)" ratio="hero" className="min-h-[420px] lg:h-[620px]" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="min-h-[420px] lg:h-[620px] w-full rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -85,8 +84,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              {/* IMAGE SLOT #2 — About: students or volunteers at a lab */}
-              <ImagePlaceholder slot="Slot #2" label="About Image — students or volunteers engaged in a hands-on lab" ratio="landscape" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/469ce570c_IMG_8295.jpg" alt="Students working on a STEM activity at a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -110,8 +108,7 @@ export default function Home() {
             {PILLARS.map((p, i) =>
             <Reveal key={p.title} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#52B788]/40">
-                  {/* IMAGE SLOTS #3/#4/#5 — replace with real pillar photos */}
-                  <ImagePlaceholder slot={p.slot} label={p.label} ratio="square" className="rounded-none" />
+                  <Image src={p.img} alt={p.alt} className="w-full h-56 rounded-none" fittingType="fill" />
                   <div className="p-7">
                     <h3 className="font-display text-xl font-bold tracking-tight text-[#2D6A4F]">{p.title}</h3>
                     <p className="mt-3 text-[15px] leading-relaxed text-[#555]">{p.body}</p>

@@ -1,5 +1,5 @@
 import React from "react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
@@ -31,8 +31,7 @@ export default function Mission() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
           <Reveal>
-            {/* IMAGE SLOT #12 — Mission: students in a lab or classroom setting */}
-            <ImagePlaceholder slot="Slot #12" label="Mission — wide-angle of a lab in an unconventional space (library or community center)" ratio="wide" />
+            <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/29d0e349e_IMG_4844.jpg" alt="Wide view of students and volunteers at a SY-STEM lab session" className="w-full h-80 rounded-2xl" fittingType="fill" />
           </Reveal>
         </div>
       </section>
