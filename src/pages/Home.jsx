@@ -102,7 +102,7 @@ export default function Home() {
 
               </h2>
               <p className="mt-4 text-lg text-[#555]">
-                Three principles guide every lab we build — and every student we reach.
+
               </p>
             </div>
           </Reveal>
