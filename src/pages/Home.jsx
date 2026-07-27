@@ -81,7 +81,7 @@ export default function Home() {
 
               </p>
               <p className="mt-5 font-display text-xl font-bold text-[#2D6A4F]">
-                What sets SY-STEM Labs apart from other STEM programs?
+
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -98,8 +98,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">
-                What makes our labs different
+              <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">What sets SY-STEM Labs apart from other STEM programs?
+
               </h2>
               <p className="mt-4 text-lg text-[#555]">
                 Three principles guide every lab we build — and every student we reach.
