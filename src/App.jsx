@@ -6,6 +6,18 @@ import PageNotFound from './lib/PageNotFound';
 import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
+import Layout from "@/components/Layout";
+import Home from "@/pages/Home";
+import Registration from "@/pages/Registration";
+import About from "@/pages/About";
+import Mission from "@/pages/Mission";
+import Labs from "@/pages/Labs";
+import Chapters from "@/pages/Chapters";
+import ChapterDetail from "@/pages/ChapterDetail";
+import Gallery from "@/pages/Gallery";
+import ExecutiveCouncil from "@/pages/ExecutiveCouncil";
+import Contact from "@/pages/Contact";
+import Apply from "@/pages/Apply";
 // Add page imports here
 
 const AuthenticatedApp = () => {
@@ -34,7 +46,19 @@ const AuthenticatedApp = () => {
   // Render the main app
   return (
     <Routes>
-      {/* Add your page Route elements here */}
+      <Route element={<Layout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/labs" element={<Labs />} />
+        <Route path="/chapters" element={<Chapters />} />
+        <Route path="/chapters/:slug" element={<ChapterDetail />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/executive-council" element={<ExecutiveCouncil />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/apply" element={<Apply />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
