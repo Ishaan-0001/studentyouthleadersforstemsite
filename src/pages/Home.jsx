@@ -43,7 +43,7 @@ export default function Home() {
                 Mastery of STEM starts with curiosity.
               </h1>
               <p className="mt-7 max-w-md text-lg leading-relaxed text-white/80">
-                Let your child intuitively explore STEM concepts through one of our labs near you.
+
               </p>
               <div className="mt-9 flex flex-col gap-4 sm:flex-row">
                 <Link to="/chapters" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#52B788] px-7 py-3.5 text-sm font-semibold text-white stem-focus transition-colors hover:bg-white hover:text-[#2D6A4F]">
