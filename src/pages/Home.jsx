@@ -7,25 +7,25 @@ import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
 
 const PILLARS = [
-  {
-    slot: "Slot #3",
-    label: "Pillar Image — Student-Built Leadership (student volunteer teaching)",
-    title: "Student-Built Leadership",
-    body: "SY-STEM is led by local student leaders. Our volunteers reach out to venues, tirelessly create curriculums and activities, and get all the supplies needed for our labs. The benefit of having our volunteers still in school is that they can see things from a learner's perspective, and teach like they want to be taught.",
-  },
-  {
-    slot: "Slot #4",
-    label: "Pillar Image — Limitless Creativity (kids building an open-ended project)",
-    title: "Limitless Creativity",
-    body: "We ensure that there is no one way to complete any lab. No two labs should feel the same, and neither should two students' experiences of the same lab. Each lab is crafted with creativity in mind, such that students can truly feel that their success is theirs — not the directions'.",
-  },
-  {
-    slot: "Slot #5",
-    label: "Pillar Image — Sparking Curiosity (joyful engagement in a lab)",
-    title: "Sparking Curiosity Through Fun",
-    body: "There is only so much any program or school can do to further a student's education in STEM. That's why we don't try to teach your child everything about STEM — we get them interested in it instead. We pack our labs with flexible programming and engaging activities to ensure your children enjoy their experience, building a love for STEM that will stay with them for life.",
-  },
-];
+{
+  slot: "Slot #3",
+  label: "Pillar Image — Student-Built Leadership (student volunteer teaching)",
+  title: "Student-Built Leadership",
+  body: "SY-STEM is led by local student leaders. Our volunteers reach out to venues, tirelessly create curriculums and activities, and get all the supplies needed for our labs. The benefit of having our volunteers still in school is that they can see things from a learner's perspective, and teach like they want to be taught."
+},
+{
+  slot: "Slot #4",
+  label: "Pillar Image — Limitless Creativity (kids building an open-ended project)",
+  title: "Limitless Creativity",
+  body: "We ensure that there is no one way to complete any lab. No two labs should feel the same, and neither should two students' experiences of the same lab. Each lab is crafted with creativity in mind, such that students can truly feel that their success is theirs — not the directions'."
+},
+{
+  slot: "Slot #5",
+  label: "Pillar Image — Sparking Curiosity (joyful engagement in a lab)",
+  title: "Sparking Curiosity Through Fun",
+  body: "There is only so much any program or school can do to further a student's education in STEM. That's why we don't try to teach your child everything about STEM — we get them interested in it instead. We pack our labs with flexible programming and engaging activities to ensure your children enjoy their experience, building a love for STEM that will stay with them for life."
+}];
+
 
 export default function Home() {
   return (
@@ -74,11 +74,11 @@ export default function Home() {
               <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">
                 What is SY-STEM?
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-[#555]">
-                Student Youth Leaders for STEM (or SY-STEM, for short) is a non-profit
-                organization dedicated to assisting students' learning, and sparking
-                interest in STEM subjects. We do this by hosting fun labs, helping
-                learning feel less like a chore and more like entertainment.
+              <p className="mt-6 text-lg leading-relaxed text-[#555]">Student Youth Leaders for STEM (or SY-STEM, for short) is a non-profit organization dedicated to assisting students' learning, and sparking interest in STEM subjects. We do this by hosting fun labs, helping learning feel less like a chore and more like entertainment.
+
+
+
+
               </p>
               <p className="mt-5 font-display text-xl font-bold text-[#2D6A4F]">
                 What sets SY-STEM Labs apart from other STEM programs?
@@ -107,8 +107,8 @@ export default function Home() {
             </div>
           </Reveal>
           <div className="mt-16 grid gap-8 md:grid-cols-3">
-            {PILLARS.map((p, i) => (
-              <Reveal key={p.title} delay={i * 0.1}>
+            {PILLARS.map((p, i) =>
+            <Reveal key={p.title} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#52B788]/40">
                   {/* IMAGE SLOTS #3/#4/#5 — replace with real pillar photos */}
                   <ImagePlaceholder slot={p.slot} label={p.label} ratio="square" className="rounded-none" />
@@ -118,7 +118,7 @@ export default function Home() {
                   </div>
                 </article>
               </Reveal>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -141,6 +141,6 @@ export default function Home() {
           </Reveal>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }
