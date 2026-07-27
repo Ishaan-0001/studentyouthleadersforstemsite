@@ -37,7 +37,7 @@ export default function Footer() {
               Get Involved
             </h4>
             <ul className="mt-4 space-y-2.5 text-sm text-white/80">
-              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[#52B788]" /> <span>mstudentyouthleader</span></li>
+              <li className="flex items-center gap-2"><Mail className="h-4 w-4 text-[#52B788]" /> <span>studentyouthleadersforstem@gmail.com</span></li>
               <li className="flex items-center gap-2"><MapPin className="h-4 w-4 text-[#52B788]" /> <span>Chapters across the U.S.</span></li>
               <li><Link to="/registration" className="hover:text-[#52B788] stem-focus rounded">Register for a Lab</Link></li>
               <li><Link to="/apply" className="hover:text-[#52B788] stem-focus rounded">Apply to Volunteer</Link></li>
