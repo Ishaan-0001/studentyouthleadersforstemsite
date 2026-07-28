@@ -70,8 +70,8 @@ export default function Home() {
 
       {/* WHAT IS SY-STEM? */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
-          <div className="grid items-center gap-14 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
               <p className="mb-3 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#0096ff]">Who we are</p>
               <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">
@@ -81,9 +81,6 @@ export default function Home() {
 
 
 
-
-              </p>
-              <p className="mt-5 font-display text-xl font-bold text-[#005020]">
 
               </p>
             </Reveal>
@@ -97,18 +94,13 @@ export default function Home() {
 
       {/* THREE PILLARS */}
       <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
-              <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">What sets SY-STEM Labs apart from other STEM programs?
-
-              </h2>
-              <p className="mt-4 text-lg text-[#555]">
-
-              </p>
+              <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">What sets SY-STEM Labs apart from other STEM programs?</h2>
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-8 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
             {PILLARS.map((p, i) =>
             <Reveal key={p.title} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40">
@@ -127,7 +119,7 @@ export default function Home() {
 
       {/* BOTTOM CTA */}
       <section className="bg-[#0096ff] text-white">
-        <div className="relative mx-auto max-w-7xl px-5 py-24 text-center lg:px-8 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-5 py-16 text-center lg:px-8 lg:py-20">
           <div className="circuit-pattern absolute inset-0 opacity-40" aria-hidden="true" />
           <Reveal className="relative">
             <h2 className="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl text-balance">

@@ -33,7 +33,7 @@ export default function Labs() {
       <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
             <div className="mx-auto max-w-2xl text-center">
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
@@ -46,7 +46,7 @@ export default function Labs() {
               </p>
             </div>
           </Reveal>
-          <div className="mt-16 grid gap-10 md:grid-cols-2">
+          <div className="mt-12 grid gap-8 md:grid-cols-2">
             {[
               { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8293cb680_IMG_4837.jpg", alt: "Students cutting and building at a lab table", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
               { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d1aab5f00_IMG_4751.jpg", alt: "Student volunteer leading a small group", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
@@ -62,7 +62,7 @@ export default function Labs() {
               </Reveal>
             ))}
           </div>
-          <Reveal className="mt-16 text-center">
+          <Reveal className="mt-12 text-center">
             <CtaPill to="/chapters" variant="green">Find a Lab Near You</CtaPill>
           </Reveal>
         </div>
