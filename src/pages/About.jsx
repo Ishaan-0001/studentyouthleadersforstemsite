@@ -46,13 +46,13 @@ export default function About() {
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
                 By Students, For Students
               </h2>
-              <p className="mt-6 text-lg leading-relaxed text-[#555]">
-                SY-STEM is fully established, maintained, and staffed by students in your
-                area. Our frequent organization-wide meetings ensure that all of our
-                volunteers' voices are heard, creating a sense of unity difficult to
-                establish when only a few hold power. Furthermore, our current position as
-                students enables us to give our students the educational experiences we
-                would have wanted.
+              <p className="mt-6 text-lg leading-relaxed text-[#555]">SY-STEM is fully established, maintained, and staffed by students in your area. Our frequent organization-wide meetings ensure that all of our volunteers' voices are heard. Furthermore, our current position as students enables us to give our students the educational experiences we would have wanted.
+
+
+
+
+
+
               </p>
             </Reveal>
             <Reveal delay={0.1}>
