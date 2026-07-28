@@ -1,6 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Atom, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin } from "lucide-react";
+import { Image } from "@/components/ui/image";
+
+const LOGO_URL = "https://media.base44.com/images/public/6a66ade4f704833c85945c24/61fdfc381_Blue_and_White_Simple_Modern_Science_Lab_Logo_-_2.png";
 
 export default function Footer() {
   return (
@@ -8,11 +11,10 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5">
-              <span className="grid h-9 w-9 place-items-center rounded-full bg-[#b4f859] text-[#005020]">
-                <Atom className="h-5 w-5" />
+            <Link to="/" className="flex items-center">
+              <span className="overflow-hidden rounded-xl bg-white ring-1 ring-white/10">
+                <Image src={LOGO_URL} alt="SY-STEM logo" className="h-12 w-12" fittingType="fit" />
               </span>
-              <span className="font-display text-lg font-extrabold tracking-tight text-[#b4f859]">SY-STEM</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               Student Youth Leaders for STEM — a non-profit organization dedicated to
