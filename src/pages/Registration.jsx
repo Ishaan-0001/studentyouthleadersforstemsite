@@ -38,25 +38,25 @@ export default function Registration() {
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-5 py-20 lg:px-8 lg:py-28">
           <Reveal>
-            <p className="mx-auto mb-10 max-w-2xl text-center text-lg leading-relaxed text-[#555]">
-              Complete the form below to register your child for an upcoming SY-STEM lab.
-              A volunteer will reach out with your session details.
+            <p className="mx-auto mb-10 max-w-2xl text-center text-lg leading-relaxed text-[#555]">Complete the form below to register your child for an upcoming SY-STEM lab. 
+
+
             </p>
 
             {/* Floating Laboratory container — the embedded Google Form */}
             <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
-              {ready ? (
-                <iframe
-                  title="SY-STEM Registration Form"
-                  src={REGISTRATION_FORM_URL}
-                  className="h-[850px] w-full border-0"
-                  sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
-                  loading="lazy"
-                >
+              {ready ?
+              <iframe
+                title="SY-STEM Registration Form"
+                src={REGISTRATION_FORM_URL}
+                className="h-[850px] w-full border-0"
+                sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
+                loading="lazy">
+                
                   Loading the registration form…
-                </iframe>
-              ) : (
-                <div className="flex flex-col items-center justify-center gap-4 px-6 py-32 text-center">
+                </iframe> :
+
+              <div className="flex flex-col items-center justify-center gap-4 px-6 py-32 text-center">
                   <p className="font-display text-xl font-bold text-[#005020]">
                     Registration form coming soon
                   </p>
@@ -65,27 +65,27 @@ export default function Registration() {
                     URL is added, the form will appear right here.
                   </p>
                 </div>
-              )}
+              }
             </div>
 
-            {ready && (
-              <div className="mt-8 text-center">
+            {ready &&
+            <div className="mt-8 text-center">
                 <a
-                  href={REGISTRATION_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
-                >
+                href={REGISTRATION_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white">
+                
                   Open Form in New Tab <ExternalLink className="h-4 w-4" />
                 </a>
                 <p className="mt-3 text-xs text-[#888]">
                   Having trouble with the form above? Use the button to open it in a new tab.
                 </p>
               </div>
-            )}
+            }
           </Reveal>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }
