@@ -56,9 +56,9 @@ export default function Home() {
               </div>
             </Reveal>
           </div>
-          <div className="relative px-5 pb-12 lg:px-10 lg:pb-28">
+          <div className="relative px-5 pb-12 pt-32 lg:px-10 lg:pt-44 lg:pb-28">
             <Reveal delay={0.15}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="min-h-[420px] lg:h-[620px] w-full rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="h-[380px] w-full rounded-2xl lg:h-[540px]" fittingType="fill" />
             </Reveal>
           </div>
         </div>
