@@ -5,11 +5,11 @@ import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
 
 const FOUNDERS = [
-  { name: "Ishaan Pradhan", quote: "I've always thought of myself as lucky for being curious about the sciences. More people deserve the joy of feeling curious, and SY-STEM is my way of helping them." },
-  { name: "Ayush Ayyagari", quote: "SY-STEM is my way of sharing the love for learning I've always carried. Too many bright minds are stifled by the fact that their education is boring. I want to change that." },
-  { name: "Tanmay Jain", quote: "My parents always stuck me in an after-school program that just had me sitting around and doing nothing. SY-STEM is everything I would have wanted in an after-school program." },
-  { name: "Om Anish Kadiyam", quote: "The way I was taught never sat right with me. Listening to someone ramble on and on... I wanted to learn by doing. SY-STEM is my answer for kids like me." },
-];
+{ name: "Ishaan Pradhan", quote: "I've always thought of myself as lucky for being curious about the sciences. More people deserve the joy of feeling curious, and SY-STEM is my way of helping them." },
+{ name: "Ayush Ayyagari", quote: "SY-STEM is my way of sharing the love for learning I've always carried. Too many bright minds are stifled by the fact that their education is boring. I want to change that." },
+{ name: "Tanmay Jain", quote: "My parents always stuck me in an after-school program that just had me sitting around and doing nothing. SY-STEM is everything I would have wanted in an after-school program." },
+{ name: "Om Anish Kadiyam", quote: "The way I was taught never sat right with me. Listening to someone ramble on and on... I wanted to learn by doing. SY-STEM is my answer for kids like me." }];
+
 
 export default function About() {
   return (
@@ -25,9 +25,9 @@ export default function About() {
               <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
                 Making Learning Fun Again
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
-                Our founders were fortunate enough to have developed a deep love for STEM
-                learning early in life, and realized not everyone had that privilege.
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">Our founders were fortunate enough to have developed a deep love for STEM learning early in life, and realized not everyone had that privilege. SY-STEM is built using the principles of theoretical physicist Robert Feynman - that the best way to teach, is to make one enjoy learning. By offering fun ways to engage in and push their boundaries in STEM, we hope to spark a curiosity in today's students that will never extinguish.
+
+
               </p>
             </Reveal>
             <Reveal delay={0.1}>
@@ -91,12 +91,12 @@ export default function About() {
             </h2>
           </Reveal>
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
-            {FOUNDERS.map((f, i) => (
-              <Reveal key={f.name} delay={(i % 2) * 0.1}>
+            {FOUNDERS.map((f, i) =>
+            <Reveal key={f.name} delay={i % 2 * 0.1}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40 sm:flex-row">
                   <div className="sm:w-2/5 bg-[#0096ff]/10 flex items-center justify-center p-8">
                     <div className="grid h-20 w-20 place-items-center rounded-full bg-[#0096ff] text-white font-display text-2xl font-bold">
-                      {f.name.split(" ").map(n => n[0]).join("")}
+                      {f.name.split(" ").map((n) => n[0]).join("")}
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col justify-center p-7">
@@ -105,13 +105,13 @@ export default function About() {
                   </div>
                 </article>
               </Reveal>
-            ))}
+            )}
           </div>
           <Reveal className="mt-16 text-center">
             <CtaPill to="/apply" variant="green">Apply to Volunteer</CtaPill>
           </Reveal>
         </div>
       </section>
-    </>
-  );
+    </>);
+
 }
