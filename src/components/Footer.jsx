@@ -9,11 +9,9 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8">
         <div className="grid gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2.5">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-white ring-1 ring-white/10">
-                <Logo className="h-10 w-10" />
-              </span>
-              <span className="font-display text-lg font-extrabold tracking-tight text-[#b4f859]">SY-STEM</span>
+            <Link to="/" className="flex items-center gap-2.5 text-[#b4f859]">
+              <Logo className="h-10 w-auto" />
+              <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               Student Youth Leaders for STEM — a non-profit organization dedicated to
