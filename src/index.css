@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,14 +7,15 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 0 0% 10%;
-    --stem-primary: #2D6A4F;
-    --stem-accent: #52B788;
-    --stem-surface: #F8FAF9;
-    --stem-ink: #1A1A1A;
-    --stem-footer: #1B4332;
+    --stem-primary: #0096ff;
+    --stem-accent: #b4f859;
+    --stem-surface: #F2FBFF;
+    --stem-ink: #005020;
+    --stem-footer: #005020;
     --radius: 0.5rem;
-    --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-    --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+    --font-display: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    --font-body: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+    --font-heading: "Montserrat", ui-sans-serif, system-ui, sans-serif;
   }
 
   body {
@@ -37,13 +39,13 @@
   }
   .stem-focus {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
-    --tw-ring-color: #52B788;
+    --tw-ring-color: #b4f859;
     --tw-ring-offset-color: #FFFFFF;
   }
   .stem-focus-on-green {
     @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2;
-    --tw-ring-color: #52B788;
-    --tw-ring-offset-color: #2D6A4F;
+    --tw-ring-color: #b4f859;
+    --tw-ring-offset-color: #0096ff;
   }
 }
 

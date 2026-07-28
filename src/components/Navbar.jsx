@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown, Cpu } from "lucide-react";
+import { Menu, X, ChevronDown, Atom } from "lucide-react";
 
 const NAV = [
   { label: "Home", to: "/" },
@@ -71,11 +71,11 @@ export default function Navbar() {
         <Link
           to="/"
           className={`flex items-center gap-2.5 stem-focus rounded-lg ${
-            dark ? "text-[#1A1A1A]" : "text-white"
+            dark ? "text-[#0096ff]" : "text-[#b4f859]"
           }`}
         >
-          <span className="grid h-9 w-9 place-items-center rounded-lg bg-[#2D6A4F] text-white">
-            <Cpu className="h-5 w-5" />
+          <span className="grid h-9 w-9 place-items-center rounded-full bg-[#b4f859] text-[#0096ff]">
+            <Atom className="h-5 w-5" />
           </span>
           <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
         </Link>
@@ -89,9 +89,9 @@ export default function Navbar() {
                   onMouseEnter={() => setOpen(item.label)}
                   className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium stem-focus transition-colors ${
                     dark
-                      ? "text-[#1A1A1A] hover:text-[#2D6A4F]"
+                      ? "text-[#1A1A1A] hover:text-[#005020]"
                       : "text-white/90 hover:text-white"
-                  } ${open === item.label ? (dark ? "text-[#2D6A4F]" : "text-white") : ""}`}
+                  } ${open === item.label ? (dark ? "text-[#005020]" : "text-white") : ""}`}
                   aria-expanded={open === item.label}
                   aria-haspopup="true"
                 >
@@ -103,9 +103,9 @@ export default function Navbar() {
                   to={item.to}
                   className={`block rounded-lg px-3 py-2 text-sm font-medium stem-focus transition-colors ${
                     dark
-                      ? "text-[#1A1A1A] hover:text-[#2D6A4F]"
+                      ? "text-[#1A1A1A] hover:text-[#005020]"
                       : "text-white/90 hover:text-white"
-                  } ${location.pathname === item.to ? (dark ? "text-[#2D6A4F]" : "text-white") : ""}`}
+                  } ${location.pathname === item.to ? (dark ? "text-[#005020]" : "text-white") : ""}`}
                 >
                   {item.label}
                 </Link>
@@ -120,9 +120,9 @@ export default function Navbar() {
                     <Link
                       key={child.label}
                       to={child.to}
-                      className={`flex items-center gap-2 border-l-2 px-4 py-2 text-sm stem-focus transition-all hover:border-[#52B788] hover:bg-[#F8FAF9] hover:text-[#2D6A4F] ${
+                      className={`flex items-center gap-2 border-l-2 px-4 py-2 text-sm stem-focus transition-all hover:border-[#b4f859] hover:bg-[#F2FBFF] hover:text-[#005020] ${
                         location.pathname === child.to
-                          ? "border-[#52B788] bg-[#F8FAF9] text-[#2D6A4F]"
+                          ? "border-[#b4f859] bg-[#F2FBFF] text-[#005020]"
                           : "border-transparent text-[#1A1A1A]"
                       }`}
                     >
@@ -138,7 +138,7 @@ export default function Navbar() {
         <div className="hidden lg:block">
           <Link
             to="/registration"
-            className="rounded-full bg-[#2D6A4F] px-5 py-2.5 text-sm font-semibold text-white stem-focus transition-colors hover:bg-[#52B788]"
+            className="rounded-full bg-[#b4f859] px-5 py-2.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-white"
           >
             REGISTER NOW
           </Link>
@@ -172,7 +172,7 @@ export default function Navbar() {
                       <ChevronDown className={`h-4 w-4 transition-transform ${mobileSub === item.label ? "rotate-180" : ""}`} />
                     </button>
                     {mobileSub === item.label && (
-                      <div className="ml-3 mb-2 border-l-2 border-[#52B788] pl-3">
+                      <div className="ml-3 mb-2 border-l-2 border-[#b4f859] pl-3">
                         {item.children.map((child) => (
                           <Link
                             key={child.label}
@@ -197,7 +197,7 @@ export default function Navbar() {
             ))}
             <Link
               to="/registration"
-              className="mt-4 block rounded-full bg-[#2D6A4F] px-5 py-3 text-center text-sm font-semibold text-white stem-focus"
+              className="mt-4 block rounded-full bg-[#0096ff] px-5 py-3 text-center text-sm font-semibold text-white stem-focus"
             >
               REGISTER NOW
             </Link>

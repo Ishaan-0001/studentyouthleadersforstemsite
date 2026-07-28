@@ -16,17 +16,17 @@ const RATIO_CLASSES = {
 export default function ImagePlaceholder({ label, slot, ratio = "landscape", className = "" }) {
   return (
     <div
-      className={`relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#D8EFE3] to-[#A8D5BE] ring-1 ring-[#2D6A4F]/10 ${RATIO_CLASSES[ratio] || RATIO_CLASSES.landscape} ${className}`}
+      className={`relative w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[#e0f2ff] to-[#eaffc0] ring-1 ring-[#0096ff]/10 ${RATIO_CLASSES[ratio] || RATIO_CLASSES.landscape} ${className}`}
       role="img"
       aria-label={label}
     >
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 p-4 text-center">
-        <div className="grid h-12 w-12 place-items-center rounded-full bg-white/70 text-[#2D6A4F] shadow-sm">
+        <div className="grid h-12 w-12 place-items-center rounded-full bg-white/70 text-[#005020] shadow-sm">
           <Camera className="h-6 w-6" />
         </div>
         <div className="space-y-1">
-          {slot && <p className="font-display text-xs font-bold uppercase tracking-widest text-[#2D6A4F]">{slot}</p>}
-          <p className="font-body text-sm italic leading-snug text-[#2D6A4F]/80">{label}</p>
+          {slot && <p className="font-display text-xs font-bold uppercase tracking-widest text-[#005020]">{slot}</p>}
+          <p className="font-body text-sm italic leading-snug text-[#005020]/80">{label}</p>
         </div>
       </div>
     </div>

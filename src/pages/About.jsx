@@ -14,12 +14,12 @@ const FOUNDERS = [
 export default function About() {
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 lg:px-8 lg:pb-28 lg:pt-44">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
-              <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#52B788]">
+              <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
                 About SY-STEM
               </p>
               <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
@@ -36,7 +36,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <WaveDivider from="#2D6A4F" to="#FFFFFF" />
+      <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       {/* BY STUDENTS, FOR STUDENTS */}
       <section className="bg-white">
@@ -63,7 +63,7 @@ export default function About() {
       </section>
 
       {/* IMPACTS */}
-      <section className="bg-[#F8FAF9]">
+      <section className="bg-[#F2FBFF]">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
@@ -80,7 +80,7 @@ export default function About() {
           </Reveal>
         </div>
       </section>
-      <WaveDivider from="#F8FAF9" to="#FFFFFF" />
+      <WaveDivider from="#F2FBFF" to="#FFFFFF" />
 
       {/* FOUNDERS */}
       <section className="bg-white">
@@ -93,14 +93,14 @@ export default function About() {
           <div className="mt-16 grid gap-8 sm:grid-cols-2">
             {FOUNDERS.map((f, i) => (
               <Reveal key={f.name} delay={(i % 2) * 0.1}>
-                <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F8FAF9] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#52B788]/40 sm:flex-row">
-                  <div className="sm:w-2/5 bg-[#2D6A4F]/10 flex items-center justify-center p-8">
-                    <div className="grid h-20 w-20 place-items-center rounded-full bg-[#2D6A4F] text-white font-display text-2xl font-bold">
+                <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40 sm:flex-row">
+                  <div className="sm:w-2/5 bg-[#0096ff]/10 flex items-center justify-center p-8">
+                    <div className="grid h-20 w-20 place-items-center rounded-full bg-[#0096ff] text-white font-display text-2xl font-bold">
                       {f.name.split(" ").map(n => n[0]).join("")}
                     </div>
                   </div>
                   <div className="flex flex-1 flex-col justify-center p-7">
-                    <h3 className="font-display text-xl font-bold tracking-tight text-[#2D6A4F]">{f.name}</h3>
+                    <h3 className="font-display text-xl font-bold tracking-tight text-[#005020]">{f.name}</h3>
                     <p className="mt-3 text-[15px] italic leading-relaxed text-[#555]">"{f.quote}"</p>
                   </div>
                 </article>

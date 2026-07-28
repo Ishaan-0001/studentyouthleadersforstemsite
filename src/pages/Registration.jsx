@@ -16,11 +16,11 @@ export default function Registration() {
 
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
           <Reveal>
-            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#52B788]">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
               Frictionless Gateway
             </p>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
@@ -33,7 +33,7 @@ export default function Registration() {
           </Reveal>
         </div>
       </section>
-      <WaveDivider from="#2D6A4F" to="#FFFFFF" />
+      <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
         <div className="mx-auto max-w-5xl px-5 py-20 lg:px-8 lg:py-28">
@@ -57,7 +57,7 @@ export default function Registration() {
                 </iframe>
               ) : (
                 <div className="flex flex-col items-center justify-center gap-4 px-6 py-32 text-center">
-                  <p className="font-display text-xl font-bold text-[#2D6A4F]">
+                  <p className="font-display text-xl font-bold text-[#005020]">
                     Registration form coming soon
                   </p>
                   <p className="max-w-md text-[15px] text-[#555]">
@@ -74,7 +74,7 @@ export default function Registration() {
                   href={REGISTRATION_FORM_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#2D6A4F] px-7 py-3.5 text-sm font-semibold text-[#2D6A4F] stem-focus transition-colors hover:bg-[#2D6A4F] hover:text-white"
+                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
                 >
                   Open Form in New Tab <ExternalLink className="h-4 w-4" />
                 </a>

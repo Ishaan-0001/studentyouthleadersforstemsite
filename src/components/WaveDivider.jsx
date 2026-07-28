@@ -4,7 +4,7 @@ import React from "react";
  * WaveDivider — a fluid SVG boundary between sections.
  * `from` is the top section's bg color, `to` is the bottom section's bg color.
  */
-export function WaveDivider({ from = "#FFFFFF", to = "#F8FAF9", className = "", flip = false }) {
+export function WaveDivider({ from = "#FFFFFF", to = "#F2FBFF", className = "", flip = false }) {
   return (
     <div
       aria-hidden="true"
@@ -24,7 +24,7 @@ export function WaveDivider({ from = "#FFFFFF", to = "#F8FAF9", className = "", 
         <path
           d="M0,80 C220,140 420,24 640,56 C860,88 1060,140 1260,108 C1360,92 1410,40 1440,56"
           fill="none"
-          stroke="#52B788"
+          stroke="#b4f859"
           strokeOpacity="0.35"
           strokeWidth="2"
           className="animate-pulse-line"

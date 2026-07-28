@@ -17,11 +17,11 @@ export default function Contact() {
 
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
           <Reveal>
-            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#52B788]">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
               Get in Touch
             </p>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
@@ -33,13 +33,13 @@ export default function Contact() {
           </Reveal>
         </div>
       </section>
-      <WaveDivider from="#2D6A4F" to="#FFFFFF" />
+      <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
           <div className="grid overflow-hidden rounded-3xl border border-black/5 shadow-xl lg:grid-cols-2">
             {/* LEFT — green info column */}
-            <div className="relative bg-[#2D6A4F] p-10 text-white lg:p-12">
+            <div className="relative bg-[#0096ff] p-10 text-white lg:p-12">
               <div className="circuit-pattern absolute inset-0 opacity-40" aria-hidden="true" />
               <Reveal className="relative">
                 <h2 className="font-display text-3xl font-extrabold tracking-tight">Get in Touch</h2>
@@ -49,7 +49,7 @@ export default function Contact() {
                 <ul className="mt-8 space-y-5 text-white/90">
                   <li className="flex items-center gap-3">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Mail className="h-5 w-5" /></span>
-                    <a href="mailto:contact@system.org" className="stem-focus rounded hover:text-[#52B788]">contact@system.org</a>
+                    <a href="mailto:contact@system.org" className="stem-focus rounded hover:text-[#b4f859]">contact@system.org</a>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Instagram className="h-5 w-5" /></span>
@@ -70,7 +70,7 @@ export default function Contact() {
             {/* RIGHT — Google Form embed */}
             <div className="bg-white p-10 lg:p-12">
               <Reveal>
-                <h3 className="font-display text-2xl font-bold tracking-tight text-[#2D6A4F]">
+                <h3 className="font-display text-2xl font-bold tracking-tight text-[#005020]">
                   Send Us a Message
                 </h3>
                 <p className="mt-3 text-[15px] leading-relaxed text-[#555]">
@@ -89,7 +89,7 @@ export default function Contact() {
                     </iframe>
                   ) : (
                     <div className="flex flex-col items-center justify-center gap-4 px-6 py-24 text-center">
-                      <p className="font-display text-lg font-bold text-[#2D6A4F]">
+                      <p className="font-display text-lg font-bold text-[#005020]">
                         Contact form coming soon
                       </p>
                       <p className="max-w-sm text-[15px] text-[#555]">
@@ -104,7 +104,7 @@ export default function Contact() {
                       href={CONTACT_FORM_URL}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 rounded-full border-2 border-[#2D6A4F] px-6 py-3 text-sm font-semibold text-[#2D6A4F] stem-focus transition-colors hover:bg-[#2D6A4F] hover:text-white"
+                      className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-6 py-3 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
                     >
                       Open Form in New Tab <ExternalLink className="h-4 w-4" />
                     </a>

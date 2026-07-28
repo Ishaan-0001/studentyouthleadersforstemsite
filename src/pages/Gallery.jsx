@@ -54,11 +54,11 @@ export default function Gallery() {
 
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
           <Reveal>
-            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#52B788]">
+            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
               Fractal Gallery
             </p>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
@@ -70,7 +70,7 @@ export default function Gallery() {
           </Reveal>
         </div>
       </section>
-      <WaveDivider from="#2D6A4F" to="#FFFFFF" />
+      <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
@@ -82,7 +82,7 @@ export default function Gallery() {
                   className="group relative block w-full overflow-hidden rounded-2xl ring-1 ring-black/5 stem-focus"
                 >
                   <Image src={img.src} alt={img.alt} className="w-full rounded-2xl" fittingType="fill" style={{ aspectRatio: i % 3 === 0 ? "4/3" : i % 3 === 1 ? "1/1" : "3/4" }} />
-                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#2D6A4F]/80 via-transparent to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#0096ff]/80 via-transparent to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
                     <span className="font-mono text-xs uppercase tracking-widest text-white">
                       Session {String(i + 1).padStart(2, "0")}
                     </span>

@@ -10,16 +10,16 @@ import Reveal from "@/components/Reveal";
 export default function GreenHero({ eyebrow, title, subtitle, slotNumber, slotLabel, ratio = "landscape" }) {
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 lg:px-8 lg:pb-28 lg:pt-44">
           <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
               <div>
                 {eyebrow && (
-                  <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#52B788]">
+                  <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
                     {eyebrow}
-                  </p>
+                    </p>
                 )}
                 <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
                   {title}
@@ -45,10 +45,10 @@ export default function GreenHero({ eyebrow, title, subtitle, slotNumber, slotLa
 export function CtaPill({ to, children, variant = "green", external = false }) {
   const base = "inline-flex items-center justify-center rounded-full px-7 py-3.5 text-sm font-semibold stem-focus transition-colors";
   const styles = {
-    green: "bg-[#2D6A4F] text-white hover:bg-[#52B788]",
-    white: "bg-white text-[#2D6A4F] hover:bg-white/90",
-    outlineGreen: "border-2 border-[#2D6A4F] text-[#2D6A4F] hover:bg-[#2D6A4F] hover:text-white",
-    outlineWhite: "border-2 border-white/70 text-white hover:bg-white hover:text-[#2D6A4F]",
+    green: "bg-[#0096ff] text-white hover:bg-[#007ad9]",
+    white: "bg-white text-[#005020] hover:bg-white/90",
+    outlineGreen: "border-2 border-[#0096ff] text-[#0096ff] hover:bg-[#0096ff] hover:text-white",
+    outlineWhite: "border-2 border-white/70 text-white hover:bg-white hover:text-[#005020]",
   };
   if (external) {
     return (

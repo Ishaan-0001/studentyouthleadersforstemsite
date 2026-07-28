@@ -7,11 +7,11 @@ import { CtaPill } from "@/components/GreenHero";
 export default function Mission() {
   return (
     <>
-      <section className="relative bg-[#2D6A4F] text-white">
+      <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
         <div className="relative mx-auto max-w-5xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
           <Reveal>
-            <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.3em] text-[#52B788]">
+            <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.3em] text-[#b4f859]">
               This is our mission.
             </p>
             <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl text-balance">
@@ -25,7 +25,7 @@ export default function Mission() {
           </Reveal>
         </div>
       </section>
-      <WaveDivider from="#2D6A4F" to="#FFFFFF" />
+      <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       {/* MISSION IMAGE */}
       <section className="bg-white">
@@ -37,7 +37,7 @@ export default function Mission() {
       </section>
 
       {/* MISSION TEXT */}
-      <section className="bg-[#F8FAF9]">
+      <section className="bg-[#F2FBFF]">
         <div className="mx-auto max-w-3xl px-5 py-24 lg:px-8 lg:py-32">
           <Reveal>
             <div className="space-y-7 text-center">
@@ -47,7 +47,7 @@ export default function Mission() {
                 about their subjects. And while there are countless dedicated teachers across
                 the nation, there simply aren't enough.
               </p>
-              <p className="text-lg font-semibold leading-relaxed text-[#2D6A4F]">
+              <p className="text-lg font-semibold leading-relaxed text-[#005020]">
                 Our volunteers were fortunate to receive the kind of STEM education every
                 child deserves, and are eager to share that same passion with others. We
                 dedicate ourselves to creating fun, engaging lessons and activities that
