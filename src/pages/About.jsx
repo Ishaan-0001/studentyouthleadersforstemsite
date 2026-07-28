@@ -64,7 +64,7 @@ export default function About() {
 
       {/* IMPACTS */}
       <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-24">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
@@ -76,6 +76,9 @@ export default function About() {
                 nationwide organizations, as well as local elementary schools and high
                 schools, in order to bring our STEM experiences to students in our area.
               </p>
+            </div>
+            <div className="mx-auto mt-12 max-w-5xl">
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/7788f27b7_IMG_4854.jpg" alt="Kids building with cardboard at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
             </div>
           </Reveal>
         </div>
