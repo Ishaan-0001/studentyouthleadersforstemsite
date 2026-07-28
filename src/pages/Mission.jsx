@@ -9,7 +9,7 @@ export default function Mission() {
     <>
       <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-5xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
+        <div className="relative mx-auto max-w-5xl px-5 pb-16 pt-36 text-center lg:px-8 lg:pb-20 lg:pt-44">
           <Reveal>
             <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.3em] text-[#b4f859]">
               This is our mission.
@@ -29,7 +29,7 @@ export default function Mission() {
 
       {/* MISSION IMAGE */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8">
+        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
           <Reveal>
             <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/29d0e349e_IMG_4844.jpg" alt="Wide view of students and volunteers at a SY-STEM lab session" className="w-full h-80 rounded-2xl" fittingType="fill" />
           </Reveal>
@@ -38,9 +38,9 @@ export default function Mission() {
 
       {/* MISSION TEXT */}
       <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-3xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-3xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
-            <div className="space-y-7 text-center">
+            <div className="space-y-5 text-center">
               <p className="text-lg leading-relaxed text-[#555]">
                 Because students aren't given the chance to enjoy learning. Proper engaging
                 STEM education is costly, and requires teachers that are truly passionate

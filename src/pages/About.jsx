@@ -40,8 +40,8 @@ export default function About() {
 
       {/* BY STUDENTS, FOR STUDENTS */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
-          <div className="grid items-center gap-14 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+          <div className="grid items-center gap-12 lg:grid-cols-2">
             <Reveal>
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
                 By Students, For Students
@@ -64,7 +64,7 @@ export default function About() {
 
       {/* IMPACTS */}
       <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
@@ -84,13 +84,13 @@ export default function About() {
 
       {/* FOUNDERS */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               Meet our Founders!
             </h2>
           </Reveal>
-          <div className="mt-16 grid gap-8 sm:grid-cols-2">
+          <div className="mt-12 grid gap-8 sm:grid-cols-2">
             {FOUNDERS.map((f, i) =>
             <Reveal key={f.name} delay={i % 2 * 0.1}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40 sm:flex-row">
@@ -107,7 +107,7 @@ export default function About() {
               </Reveal>
             )}
           </div>
-          <Reveal className="mt-16 text-center">
+          <Reveal className="mt-12 text-center">
             <CtaPill to="/apply" variant="green">Apply to Volunteer</CtaPill>
           </Reveal>
         </div>
