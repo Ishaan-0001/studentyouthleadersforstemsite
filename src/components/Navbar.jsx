@@ -1,9 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
-import { Image } from "@/components/ui/image";
-
-const LOGO_URL = "https://media.base44.com/images/public/6a66ade4f704833c85945c24/61fdfc381_Blue_and_White_Simple_Modern_Science_Lab_Logo_-_2.png";
+import Logo from "@/components/Logo";
 
 const NAV = [
   { label: "Home", to: "/" },
@@ -71,10 +69,16 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
-        <Link to="/" className="flex items-center stem-focus rounded-lg">
-          <span className="overflow-hidden rounded-xl bg-white ring-1 ring-black/5">
-            <Image src={LOGO_URL} alt="SY-STEM logo" className="h-10 w-10" fittingType="fit" />
+        <Link
+          to="/"
+          className={`flex items-center gap-2.5 stem-focus rounded-lg ${
+            dark ? "text-[#005020]" : "text-white"
+          }`}
+        >
+          <span className="grid h-10 w-10 place-items-center rounded-xl bg-white ring-1 ring-black/5">
+            <Logo className="h-8 w-8" />
           </span>
+          <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
