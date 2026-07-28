@@ -16,8 +16,8 @@ export default function About() {
     <>
       <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 lg:px-8 lg:pb-28 lg:pt-44">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="relative mx-auto max-w-7xl px-5 pb-12 pt-36 lg:px-8 lg:pb-16 lg:pt-44">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal>
               <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
                 About SY-STEM
@@ -31,7 +31,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/0e212b142_IMG_4761.jpg" alt="Student working at a glue gun during a STEM lab" className="w-full h-96 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/5e0fbfabf_IMG_4902.jpg" alt="Group of students outside watching a STEM experiment" className="w-full h-96 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -40,8 +40,8 @@ export default function About() {
 
       {/* BY STUDENTS, FOR STUDENTS */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
+        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
+          <div className="grid items-center gap-10 lg:grid-cols-2">
             <Reveal>
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
                 By Students, For Students
@@ -64,7 +64,7 @@ export default function About() {
 
       {/* IMPACTS */}
       <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
           <Reveal>
             <div className="mx-auto max-w-3xl text-center">
               <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
@@ -84,13 +84,13 @@ export default function About() {
 
       {/* FOUNDERS */}
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+        <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
           <Reveal>
             <h2 className="text-center font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl">
               Meet our Founders!
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-8 sm:grid-cols-2">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2">
             {FOUNDERS.map((f, i) =>
             <Reveal key={f.name} delay={i % 2 * 0.1}>
                 <article className="group flex h-full flex-col overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40 sm:flex-row">
@@ -107,7 +107,7 @@ export default function About() {
               </Reveal>
             )}
           </div>
-          <Reveal className="mt-12 text-center">
+          <Reveal className="mt-10 text-center">
             <CtaPill to="/apply" variant="green">Apply to Volunteer</CtaPill>
           </Reveal>
         </div>
