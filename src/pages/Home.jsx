@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { MapPin, ArrowRight } from "lucide-react";
+import { MapPin, ArrowRight, ChevronDown } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
@@ -31,39 +31,40 @@ const PILLARS = [
 export default function Home() {
   return (
     <>
-      {/* HERO — split interlock */}
-      <section className="relative bg-[#0096ff] text-white">
-        <div className="circuit-pattern absolute inset-0 opacity-70" aria-hidden="true" />
-        <div className="relative mx-auto grid max-w-7xl items-stretch lg:grid-cols-[45fr_55fr]">
-          <div className="flex items-center px-5 pb-12 pt-32 lg:px-10 lg:pt-44 lg:pb-28">
-            <Reveal>
-              <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.3em] text-[#b4f859]">
-                Re-learning how to learn
-              </p>
-              <h1 className="font-display text-5xl font-extrabold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl text-balance">
-                Mastery of STEM starts with curiosity.
-              </h1>
-              <p className="mt-7 max-w-md text-lg leading-relaxed text-white/80">
-
-              </p>
-              <div className="mt-9 flex flex-col gap-4 sm:flex-row">
-                <Link to="/chapters" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#b4f859] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-white hover:text-[#005020]">
-                  <MapPin className="h-4 w-4" /> Explore Our Locations
-                </Link>
-                <Link to="/registration" className="inline-flex items-center justify-center rounded-full border-2 border-white/70 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#005020] stem-focus-on-green">
-                  Register Now
-                </Link>
-              </div>
-            </Reveal>
-          </div>
-          <div className="relative px-5 pb-12 pt-32 lg:px-10 lg:pt-44 lg:pb-28">
-            <Reveal delay={0.15}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="h-[380px] w-full rounded-2xl lg:h-[540px]" fittingType="fill" />
-            </Reveal>
-          </div>
+      {/* HERO — immersive full-bleed */}
+      <section className="relative min-h-[100svh] w-full overflow-hidden">
+        <div className="absolute inset-0" aria-hidden="true">
+          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="h-full w-full" fittingType="fill" />
+        </div>
+        <div className="absolute inset-0 bg-[#005020]/60" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
+        <div className="circuit-pattern absolute inset-0 opacity-20" aria-hidden="true" />
+        <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-32 pt-36 lg:px-8 lg:pt-44">
+          <Reveal>
+            <p className="mb-5 font-display text-xs font-bold uppercase tracking-[0.3em] text-[#b4f859]">
+              Re-learning how to learn
+            </p>
+            <h1 className="max-w-3xl font-display text-5xl font-extrabold leading-[1.02] tracking-tight text-white sm:text-6xl lg:text-7xl text-balance">
+              Sparking curiosity through real labs.
+            </h1>
+            <p className="mt-7 max-w-xl text-lg leading-relaxed text-white/85">
+              Student-led, hands-on STEM labs that turn learning into something kids actually look forward to.
+            </p>
+            <div className="mt-9 flex flex-col gap-4 sm:flex-row">
+              <Link to="/chapters" className="inline-flex items-center justify-center gap-2 rounded-full bg-[#b4f859] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-white hover:text-[#005020]">
+                <MapPin className="h-4 w-4" /> Explore Our Locations
+              </Link>
+              <Link to="/registration" className="inline-flex items-center justify-center rounded-full border-2 border-white/70 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#005020] stem-focus-on-green">
+                Register Now
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+        <div className="absolute inset-x-0 bottom-6 flex justify-center" aria-hidden="true">
+          <ChevronDown className="h-6 w-6 animate-bounce text-white/70" />
         </div>
       </section>
-      <WaveDivider from="#0096ff" to="#b4f859" />
+      <WaveDivider from="#005020" to="#b4f859" />
       <FeatureStrip />
       <WaveDivider from="#b4f859" to="#FFFFFF" />
 
