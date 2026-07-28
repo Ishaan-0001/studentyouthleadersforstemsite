@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const REGISTRATION_FORM_URL = "PASTE_YOUR_GOOGLE_FORM_URL_HERE";
+const REGISTRATION_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSfMDx4Y2mDgEBe0P0gRdG1GGIiSrFs5HHQkEg39qJWTutYRvw/viewform?embedded=true";
 
 export default function Registration() {
   const ready = REGISTRATION_FORM_URL && !REGISTRATION_FORM_URL.includes("PASTE_YOUR");
