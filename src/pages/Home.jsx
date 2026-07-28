@@ -36,8 +36,8 @@ export default function Home() {
         <div className="absolute inset-0" aria-hidden="true">
           <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="h-full w-full" fittingType="fill" />
         </div>
-        <div className="absolute inset-0 bg-[#005020]/60" aria-hidden="true" />
-        <div className="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0096ff]/75 via-[#0078d4]/50 to-[#005020]/65" aria-hidden="true" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
         <div className="circuit-pattern absolute inset-0 opacity-20" aria-hidden="true" />
         <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-32 pt-36 lg:px-8 lg:pt-44">
           <Reveal>
