@@ -8,7 +8,18 @@ export const SESSIONS = [
   { slug: "flimsy-fliers-vs-creaky-catapults", name: "Flimsy Fliers VS Creaky Catapults", date: "March 10, 2026", images: [] },
   { slug: "brittle-bridges", name: "Brittle Bridges", date: "February 10, 2026", images: [] },
   { slug: "rollin-coasters-2", name: "Rollin' Coasters", date: "January 13, 2026", images: [] },
-  { slug: "shell-shock", name: "Shell Shock", date: "December 16, 2025", images: [] },
+  {
+    slug: "shell-shock",
+    name: "Shell Shock",
+    date: "December 16, 2025",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/c67fc1b78_pic50.jpg", alt: "Student releasing a payload from the top of a playground slide" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/46974f213_pic49.jpg", alt: "White bag floating into the green slide opening" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d69641edf_pic46.jpg", alt: "Student tossing a parachute from the slide platform" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9158d57c4_pic48.jpg", alt: "Straw-and-grid-paper shell shock build on the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/43ce34b7a_pic47.jpg", alt: "Classroom briefing before the Shell Shock activity" },
+    ],
+  },
   {
     slug: "magnetic-maze",
     name: "Magnetic Maze",
