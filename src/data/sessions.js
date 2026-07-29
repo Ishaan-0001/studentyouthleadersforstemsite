@@ -12,7 +12,19 @@ export const SESSIONS = [
   { slug: "magnetic-maze", name: "Magnetic Maze", date: "November 25, 2025", images: [] },
   { slug: "drag-n-drop", name: "Drag N' Drop", date: "November 8, 2025", images: [] },
   { slug: "creatin-catapults", name: "Creatin' Catapults", date: "October 27, 2025", images: [] },
-  { slug: "building-boats", name: "Building Boats", date: "October 18, 2025", images: [] },
+  {
+    slug: "building-boats",
+    name: "Building Boats",
+    date: "October 18, 2025",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/6ebec1e2d_pic17.jpg", alt: "Three children showing off their foil boat crafts" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/fac2deb92_pic16.jpg", alt: "Two girls shaping aluminum foil boats" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9967037af_pic18.jpg", alt: "Girl smiling with her foil boat" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/e7962e039_pic19.jpg", alt: "Students testing foil boats in a water bin" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29562315a_pic20.jpg", alt: "Children decorating their foil boat projects" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9dbc5b6ad_pic21.jpg", alt: "Two girls holding up their foil creations" },
+    ],
+  },
   {
     slug: "crashin-cars",
     name: "Crashin' Cars",
