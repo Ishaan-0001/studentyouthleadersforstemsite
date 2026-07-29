@@ -31,7 +31,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/26bdf6b41_pic114.jpg" alt="Students watching a water rocket soar above the patio" className="w-full h-96 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/51addd6b5_pic9.jpg" alt="Students collaborating on a cardboard roller coaster build" className="w-full h-96 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d6e88a2bb_pic13.jpg" alt="Student volunteer mentoring younger kids as they build craft cars" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/ff4dfd33d_pic28.jpg" alt="Older student helping a younger girl prepare a parachute glider" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>

@@ -34,7 +34,7 @@ export default function Home() {
       {/* HERO — immersive full-bleed */}
       <section className="relative min-h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0" aria-hidden="true">
-          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/51addd6b5_pic9.jpg" alt="Students collaborating on a cardboard roller coaster build" className="h-full w-full" fittingType="fill" />
+          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/9f272849d_pic22.jpg" alt="Student intently focusing on assembling a craft-stick catapult" className="h-full w-full" fittingType="fill" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0096ff]/75 via-[#0078d4]/50 to-[#005020]/65" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
