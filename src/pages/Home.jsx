@@ -9,8 +9,8 @@ import FeatureStrip from "@/components/FeatureStrip";
 
 const PILLARS = [
 {
-  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/1bd0e69e9_pic5.jpg",
-  alt: "Student leader presenting the science behind a roller coaster build",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ab52378d4_pic38.jpg",
+  alt: "Older student volunteer helping a younger student wire a magnetic maze",
   title: "Student-Built Leadership",
   body: "SY-STEM is led by local student leaders. Our volunteers reach out to venues, tirelessly create curriculums and activities, and get all the supplies needed for our labs. The benefit of having our volunteers still in school is that they can see things from a learner's perspective, and teach like they want to be taught."
 },
@@ -34,7 +34,7 @@ export default function Home() {
       {/* HERO — immersive full-bleed */}
       <section className="relative min-h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0" aria-hidden="true">
-          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/5add9181c_pic116.jpg" alt="Water rocket launching at a SY-STEM lab" className="h-full w-full" fittingType="fill" />
+          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/79ee4a412_pic8.jpg" alt="Students building cardboard roller coasters in the makerspace" className="h-full w-full" fittingType="fill" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0096ff]/75 via-[#0078d4]/50 to-[#005020]/65" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
@@ -85,7 +85,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/333085f19_pic44.jpg" alt="Students building a magnetic maze at a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/e326833be_pic1.jpg" alt="Students with their cardboard roller coaster projects at a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>

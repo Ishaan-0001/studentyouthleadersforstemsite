@@ -31,7 +31,7 @@ export default function Mission() {
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-16">
           <Reveal>
-            <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/9967037af_pic18.jpg" alt="Student smiling with her foil boat at a SY-STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
+            <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/65c11be16_pic52.jpg" alt="Classroom buzzing with students building together" className="w-full h-80 rounded-2xl" fittingType="fill" />
           </Reveal>
         </div>
       </section>

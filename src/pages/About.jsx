@@ -56,7 +56,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/935471d3d_pic100.png" alt="Student assembling a coaster in the Innovation Zone" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d6e88a2bb_pic13.jpg" alt="Student volunteer mentoring younger kids as they build craft cars" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </div>
             <div className="mx-auto mt-12 max-w-5xl">
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/cca84b3f4_pic102.png" alt="Group assembling a cardboard coaster track at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/ad6afd6b5_pic53.jpg" alt="Group of kids building a coaster together at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
             </div>
           </Reveal>
         </div>
