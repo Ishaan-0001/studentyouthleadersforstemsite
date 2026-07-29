@@ -25,7 +25,7 @@ export default function Labs() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/43665f118_IMG_4836.jpg" alt="Students exploring supplies in a STEM classroom" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/05867cf77_pic115.jpg" alt="Wide view of a busy SY-STEM rocket-building workshop" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -48,8 +48,8 @@ export default function Labs() {
           </Reveal>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {[
-              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8293cb680_IMG_4837.jpg", alt: "Students cutting and building at a lab table", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
-              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d1aab5f00_IMG_4751.jpg", alt: "Student volunteer leading a small group", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
+              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/f54e2099d_pic111.jpg", alt: "Two girls cutting cardboard for their rocket", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
+              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/a9afed629_pic25.jpg", alt: "Student leader guiding a peer through a catapult launch", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40">

@@ -9,20 +9,20 @@ import FeatureStrip from "@/components/FeatureStrip";
 
 const PILLARS = [
 {
-  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ca553d59a_IMG_4759.jpg",
-  alt: "Student volunteer leading a STEM group discussion",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/1bd0e69e9_pic5.jpg",
+  alt: "Student leader presenting the science behind a roller coaster build",
   title: "Student-Built Leadership",
   body: "SY-STEM is led by local student leaders. Our volunteers reach out to venues, tirelessly create curriculums and activities, and get all the supplies needed for our labs. The benefit of having our volunteers still in school is that they can see things from a learner's perspective, and teach like they want to be taught."
 },
 {
-  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/34e47966a_IMG_4764.jpg",
-  alt: "Kids building an open-ended cardboard project",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/6ebec1e2d_pic17.jpg",
+  alt: "Kids showing off their foil boat creations",
   title: "Limitless Creativity",
   body: "We ensure that there is no one way to complete any lab. No two labs should feel the same, and neither should two students' experiences of the same lab. Each lab is crafted with creativity in mind, such that students can truly feel that their success is theirs — not the directions'."
 },
 {
-  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/b6f2d05dd_IMG_4850.jpg",
-  alt: "Students joyfully presenting a paper airplane experiment",
+  img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9d8952723_pic29.jpg",
+  alt: "Student celebrating as her parachute craft floats mid-air",
   title: "Sparking Curiosity Through Fun",
   body: "There is only so much any program or school can do to further a student's education in STEM. That's why we don't try to teach your child everything about STEM — we get them interested in it instead. We pack our labs with flexible programming and engaging activities to ensure your children enjoy their experience, building a love for STEM that will stay with them for life."
 }];
@@ -34,7 +34,7 @@ export default function Home() {
       {/* HERO — immersive full-bleed */}
       <section className="relative min-h-[100svh] w-full overflow-hidden">
         <div className="absolute inset-0" aria-hidden="true">
-          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/d5836ffb5_IMG_4749.jpg" alt="Student folding a paper airplane at a SY-STEM lab" className="h-full w-full" fittingType="fill" />
+          <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/5add9181c_pic116.jpg" alt="Water rocket launching at a SY-STEM lab" className="h-full w-full" fittingType="fill" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-[#0096ff]/75 via-[#0078d4]/50 to-[#005020]/65" aria-hidden="true" />
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-b from-transparent to-[#005020]" aria-hidden="true" />
@@ -85,7 +85,7 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/469ce570c_IMG_8295.jpg" alt="Students working on a STEM activity at a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/333085f19_pic44.jpg" alt="Students building a magnetic maze at a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>

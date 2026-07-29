@@ -31,7 +31,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/5e0fbfabf_IMG_4902.jpg" alt="Group of students outside watching a STEM experiment" className="w-full h-96 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/26bdf6b41_pic114.jpg" alt="Students watching a water rocket soar above the patio" className="w-full h-96 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function About() {
               </p>
             </Reveal>
             <Reveal delay={0.1}>
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/0d8f2f9b8_IMG_4834.jpg" alt="Students in an Innovation Zone classroom during a SY-STEM lab" className="w-full h-72 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/935471d3d_pic100.png" alt="Student assembling a coaster in the Innovation Zone" className="w-full h-72 rounded-2xl" fittingType="fill" />
             </Reveal>
           </div>
         </div>
@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </div>
             <div className="mx-auto mt-12 max-w-5xl">
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/7788f27b7_IMG_4854.jpg" alt="Kids building with cardboard at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/cca84b3f4_pic102.png" alt="Group assembling a cardboard coaster track at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
             </div>
           </Reveal>
         </div>
