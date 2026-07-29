@@ -6,9 +6,10 @@ import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 
 export const CHAPTERS = [
-  { slug: "grafton", name: "Grafton", state: "MA", slot: "Slot #13", label: "Chapter — Grafton, MA lab photo", blurb: "Bringing hands-on STEM labs to students in Grafton, Massachusetts, in partnership with local schools and community spaces." },
-  { slug: "carmel", name: "Carmel", state: "IN", slot: "Slot #14", label: "Chapter — Carmel, IN lab photo", blurb: "Our Carmel chapter serves young learners across Indiana with engaging, curiosity-driven lab sessions." },
-  { slug: "belmont", name: "Belmont", state: "MA", slot: "Slot #15", label: "Chapter — Belmont, MA lab photo", blurb: "The Belmont chapter connects Massachusetts students with student-led STEM experiences close to home." },
+  { slug: "belmont", name: "Belmont", state: "MA", slot: "Slot #13", label: "Chapter — Belmont, MA lab photo", blurb: "Bringing hands-on STEM labs to students in Belmont, Massachusetts, in partnership with local schools and community spaces." },
+  { slug: "grafton", name: "Grafton", state: "MA", slot: "Slot #14", label: "Chapter — Grafton, MA lab photo", blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions." },
+  { slug: "stoughton", name: "Stoughton", state: "MA", slot: "Slot #15", label: "Chapter — Stoughton, MA lab photo", blurb: "The Stoughton chapter connects Massachusetts students with student-led STEM experiences close to home." },
+  { slug: "torrance", name: "Torrance", state: "CA", slot: "Slot #16", label: "Chapter — Torrance, CA lab photo", blurb: "Our Torrance chapter brings SY-STEM's student-led labs to young learners across Southern California." },
 ];
 
 export default function Chapters() {
@@ -34,7 +35,7 @@ export default function Chapters() {
 
       <section className="bg-white">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {CHAPTERS.map((ch, i) => (
               <Reveal key={ch.slug} delay={i * 0.1}>
                 {/* Destination Card — massive low-opacity location text with floating image + button */}
