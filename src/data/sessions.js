@@ -13,7 +13,19 @@ export const SESSIONS = [
   { slug: "drag-n-drop", name: "Drag N' Drop", date: "November 8, 2025", images: [] },
   { slug: "creatin-catapults", name: "Creatin' Catapults", date: "October 27, 2025", images: [] },
   { slug: "building-boats", name: "Building Boats", date: "October 18, 2025", images: [] },
-  { slug: "crashin-cars", name: "Crashin' Cars", date: "July 29, 2025", images: [] },
+  {
+    slug: "crashin-cars",
+    name: "Crashin' Cars",
+    date: "July 29, 2025",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/4a6e05f89_pic14.jpg", alt: "Group of students in the Crashin' Cars session" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/6cfcabdf8_pic10.jpg", alt: "Three boys building toy cars from craft supplies" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/02e5e13ea_pic11.jpg", alt: "Children assembling craft cars with skewers and paper plates" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/858b03009_pic12.jpg", alt: "Student and mentor giving a thumbs up at Crashin' Cars" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d6e88a2bb_pic13.jpg", alt: "Mentor helping students build wheeled craft vehicles" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/1b7fa833d_pic15.jpg", alt: "Two children gluing together their craft car projects" },
+    ],
+  },
   {
     slug: "rollin-coasters",
     name: "Rollin' Coasters",
