@@ -7,7 +7,22 @@ export const SESSIONS = [
   { slug: "rollin-coasters-3", name: "Rollin' Coasters", date: "April 2, 2026", images: [] },
   { slug: "flimsy-fliers-vs-creaky-catapults", name: "Flimsy Fliers VS Creaky Catapults", date: "March 10, 2026", images: [] },
   { slug: "brittle-bridges", name: "Brittle Bridges", date: "February 10, 2026", images: [] },
-  { slug: "rollin-coasters-2", name: "Rollin' Coasters", date: "January 13, 2026", images: [] },
+  {
+    slug: "rollin-coasters-2",
+    name: "Rollin' Coasters",
+    date: "January 13, 2026",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/11e3d22d1_pic59.jpg", alt: "Three girls with a cardboard coaster track running off a chair" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/04d070478_pic55.jpg", alt: "Three boys building a cardboard coaster structure" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/61cf9058c_pic56.jpg", alt: "Close-up of students assembling their coaster at the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/577116897_pic54.jpg", alt: "Student gluing cardboard pieces for the coaster track" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ad6afd6b5_pic53.jpg", alt: "Group building the coaster with cups and cardboard" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/dfe8f014d_pic58.jpg", alt: "Students gathered around a cup tower at the build table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/19ece8480_pic57.jpg", alt: "Students cutting and gluing cardboard for the coaster" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/65c11be16_pic52.jpg", alt: "Classroom buzzing with coaster-building groups" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/504734461_pic51.jpg", alt: "Wide view of the Rollin' Coasters 2 classroom" },
+    ],
+  },
   {
     slug: "shell-shock",
     name: "Shell Shock",
