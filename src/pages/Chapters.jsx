@@ -4,12 +4,13 @@ import { ArrowRight } from "lucide-react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
+import ChapterMap from "@/components/ChapterMap";
 
 export const CHAPTERS = [
-  { slug: "belmont", name: "Belmont", state: "MA", slot: "Slot #13", label: "Chapter — Belmont, MA lab photo", blurb: "Bringing hands-on STEM labs to students in Belmont, Massachusetts, in partnership with local schools and community spaces." },
-  { slug: "grafton", name: "Grafton", state: "MA", slot: "Slot #14", label: "Chapter — Grafton, MA lab photo", blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions." },
-  { slug: "stoughton", name: "Stoughton", state: "MA", slot: "Slot #15", label: "Chapter — Stoughton, MA lab photo", blurb: "The Stoughton chapter connects Massachusetts students with student-led STEM experiences close to home." },
-  { slug: "torrance", name: "Torrance", state: "CA", slot: "Slot #16", label: "Chapter — Torrance, CA lab photo", blurb: "Our Torrance chapter brings SY-STEM's student-led labs to young learners across Southern California." },
+  { slug: "belmont", name: "Belmont", state: "MA", lat: 42.396, lng: -71.179, slot: "Slot #13", label: "Chapter — Belmont, MA lab photo", blurb: "Bringing hands-on STEM labs to students in Belmont, Massachusetts, in partnership with local schools and community spaces." },
+  { slug: "grafton", name: "Grafton", state: "MA", lat: 42.2, lng: -71.687, slot: "Slot #14", label: "Chapter — Grafton, MA lab photo", blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions." },
+  { slug: "stoughton", name: "Stoughton", state: "MA", lat: 42.125, lng: -71.103, slot: "Slot #15", label: "Chapter — Stoughton, MA lab photo", blurb: "The Stoughton chapter connects Massachusetts students with student-led STEM experiences close to home." },
+  { slug: "torrance", name: "Torrance", state: "CA", lat: 33.836, lng: -118.343, slot: "Slot #16", label: "Chapter — Torrance, CA lab photo", blurb: "Our Torrance chapter brings SY-STEM's student-led labs to young learners across Southern California." },
 ];
 
 export default function Chapters() {
@@ -34,6 +35,27 @@ export default function Chapters() {
       <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
+        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
+          <Reveal>
+            <div className="text-center">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-[#0096ff]">
+                Find Us
+              </p>
+              <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[#005020] sm:text-4xl">
+                Chapters Across North America
+              </h2>
+              <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-[#555]">
+                Zoom in and tap a pin to see where our student-led labs are making an impact.
+              </p>
+            </div>
+          </Reveal>
+          <Reveal delay={0.1} className="mt-10">
+            <ChapterMap chapters={CHAPTERS} />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="bg-[#F2FBFF]">
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {CHAPTERS.map((ch, i) => (
