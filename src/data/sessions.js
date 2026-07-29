@@ -10,7 +10,19 @@ export const SESSIONS = [
   { slug: "rollin-coasters-2", name: "Rollin' Coasters", date: "January 13, 2026", images: [] },
   { slug: "shell-shock", name: "Shell Shock", date: "December 16, 2025", images: [] },
   { slug: "magnetic-maze", name: "Magnetic Maze", date: "November 25, 2025", images: [] },
-  { slug: "drag-n-drop", name: "Drag N' Drop", date: "November 8, 2025", images: [] },
+  {
+    slug: "drag-n-drop",
+    name: "Drag N' Drop",
+    date: "November 8, 2025",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9d8952723_pic29.jpg", alt: "Girl celebrating as her parachute craft floats mid-air" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ff4dfd33d_pic28.jpg", alt: "Teen and student preparing a parachute glider indoors" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/28c5a7ce3_pic30.jpg", alt: "Student holding a parachute craft outdoors" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/db2cc1de7_pic31.jpg", alt: "Boy marking his parachute material at the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/809bbdd87_pic32.jpg", alt: "Child gluing together a parachute assembly" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/127daa70a_pic33.jpg", alt: "Mentor and student finishing a parachute craft" },
+    ],
+  },
   {
     slug: "crazy-catapults",
     name: "Crazy Catapults",
