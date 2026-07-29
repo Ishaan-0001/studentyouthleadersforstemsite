@@ -3,7 +3,19 @@
 // objects ({ src, alt }) into each session as they're imported.
 export const SESSIONS = [
   { slug: "roarin-rockets", name: "Roarin' Rockets", date: "June 20, 2026", images: [] },
-  { slug: "shell-shock-2", name: "Shell Shock", date: "April 18, 2026", images: [] },
+  {
+    slug: "shell-shock-2",
+    name: "Shell Shock",
+    date: "April 18, 2026",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/5455fb3aa_pic62.jpg", alt: "Student launching a green-bag parachute from a picnic table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/04709e2f0_pic63.jpg", alt: "Student raising a parachute craft toward the pergola" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/da177401b_pic61.jpg", alt: "Boy holding a cardboard egg container with a green egg" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/be168841b_pic65.jpg", alt: "Girl preparing parachute materials at the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/7a9ab008b_pic64.jpg", alt: "Cardboard payload with a plastic-bag parachute outdoors" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/0d73e880c_pic60.jpg", alt: "Hands securing a purple egg inside a cardboard shell" },
+    ],
+  },
   { slug: "rollin-coasters-3", name: "Rollin' Coasters", date: "April 2, 2026", images: [] },
   { slug: "flimsy-fliers-vs-creaky-catapults", name: "Flimsy Fliers VS Creaky Catapults", date: "March 10, 2026", images: [] },
   { slug: "brittle-bridges", name: "Brittle Bridges", date: "February 10, 2026", images: [] },
