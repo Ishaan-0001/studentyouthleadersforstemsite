@@ -2,7 +2,25 @@
 // with its own set of photos. `images` is intentionally empty — drop image
 // objects ({ src, alt }) into each session as they're imported.
 export const SESSIONS = [
-  { slug: "roarin-rockets", name: "Roarin' Rockets", date: "June 20, 2026", images: [] },
+  {
+    slug: "roarin-rockets",
+    name: "Roarin' Rockets",
+    date: "June 20, 2026",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/5add9181c_pic116.jpg", alt: "Water rocket launching mid-air over the launch pad" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/26bdf6b41_pic114.jpg", alt: "Group watching a bottle rocket soar above the patio" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/f912da697_pic108.jpg", alt: "Boy pumping the launcher as a rocket lifts off" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/cfb70e96d_pic110.jpg", alt: "Instructor teaching propulsion and pressure on screen" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/91595a376_pic109.jpg", alt: "Girl shaping cardboard for her rocket build" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/fb94f7607_pic107.jpg", alt: "Teen and girl cutting cardboard for rocket fins" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/f54e2099d_pic111.jpg", alt: "Two girls cutting cardboard with a utility knife" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8b78d7f85_pic112.jpg", alt: "Boy assembling a cardboard rocket at the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/6afaff502_pic113.jpg", alt: "Close-up of the Veken shower-caddy rocket body" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/0dc499e78_pic117.jpg", alt: "Two children gluing foam pieces onto their rocket" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/d22992ed6_pic118.jpg", alt: "Classroom buzzing with cardboard rocket building" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/05867cf77_pic115.jpg", alt: "Wide view of the Roarin' Rockets build workshop" },
+    ],
+  },
   {
     slug: "shell-shock-2",
     name: "Shell Shock",
