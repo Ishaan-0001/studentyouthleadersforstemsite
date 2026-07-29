@@ -1,71 +1,26 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { Image } from "@/components/ui/image";
+import React from "react";
+import { Link } from "react-router-dom";
+import { Camera, ArrowRight } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
-
-const IMAGES = [
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/56442b45e_IMG_4852.jpg", alt: "Students at a STEM lab" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/7788f27b7_IMG_4854.jpg", alt: "Kids building with cardboard" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8b7c496d0_IMG_4855.jpg", alt: "Child smiling at a STEM session" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/4cdafd1af_IMG_4857.jpg", alt: "Group engineering challenge" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/46ef7f077_IMG_4858.jpg", alt: "Students presenting their project" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/62d5b6ac2_IMG_4863.jpg", alt: "Kids launching a parachute outdoors" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/eb7f7e597_IMG_4887.jpg", alt: "Student launching paper airplane" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/5a6a18ff7_IMG_4889.jpg", alt: "Kids standing on picnic table testing project" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/b8dee9935_IMG_4894.jpg", alt: "Student holding their invention" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/5e0fbfabf_IMG_4902.jpg", alt: "Group of students outside watching experiment" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9550ec645_IMG_4906.jpg", alt: "Water balloon launcher experiment" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/180780e23_IMG_5154.jpg", alt: "Student leader teaching with a slide" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/246a140ed_IMG_5155.jpg", alt: "Kids working with parachute and cardboard" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9bfed5e4d_IMG_5156.jpg", alt: "Students measuring and cutting cardboard" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/632aee54b_IMG_5157.jpg", alt: "Young student using glue gun" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8a90ad09d_IMG_5159.jpg", alt: "Students collaborating on a STEM project" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/367894bdf_IMG_5164.jpg", alt: "Kids working with cardboard boxes" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/e9aebe6e0_IMG_5167.jpg", alt: "Students building at a library table" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/2995b45df_IMG_5169.jpg", alt: "Group of kids cutting and assembling" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3318f185b_IMG_5253.jpg", alt: "Young students gluing at a STEM lab" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/62505cd63_IMG_5254.jpg", alt: "Student focused on engineering task" },
-  { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/fd0026bf5_IMG_5255.jpg", alt: "Girl smiling with paper airplane collection" },
-];
+import { Image } from "@/components/ui/image";
+import { SESSIONS } from "@/data/sessions";
 
 export default function Gallery() {
-  const [active, setActive] = useState(null);
-  const isOpen = active !== null;
-
-  const close = useCallback(() => setActive(null), []);
-  const prev = useCallback(() => setActive((a) => (a === null ? a : (a - 1 + IMAGES.length) % IMAGES.length)), []);
-  const next = useCallback(() => setActive((a) => (a === null ? a : (a + 1) % IMAGES.length)), []);
-
-  useEffect(() => {
-    if (!isOpen) return;
-    const onKey = (e) => {
-      if (e.key === "Escape") close();
-      if (e.key === "ArrowLeft") prev();
-      if (e.key === "ArrowRight") next();
-    };
-    document.addEventListener("keydown", onKey);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
-    };
-  }, [isOpen, close, prev, next]);
-
   return (
     <>
       <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
+        <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 text-center lg:px-8 lg:pb-24 lg:pt-44">
           <Reveal>
             <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
-              Fractal Gallery
+              Session Gallery
             </p>
             <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
-              Session Gallery
+              Our Labs in Action
             </h1>
             <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-              A look at our labs in action.
+              Each session is its own collection of photos. Click a session to explore the highlights.
             </p>
           </Reveal>
         </div>
@@ -73,49 +28,51 @@ export default function Gallery() {
       <WaveDivider from="#0096ff" to="#FFFFFF" />
 
       <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
-          <div className="columns-1 gap-5 sm:columns-2 lg:columns-3 [&>*]:mb-5">
-            {IMAGES.map((img, i) => (
-              <Reveal key={i} delay={(i % 3) * 0.08} className="break-inside-avoid">
-                <button
-                  onClick={() => setActive(i)}
-                  className="group relative block w-full overflow-hidden rounded-2xl ring-1 ring-black/5 stem-focus"
-                >
-                  <Image src={img.src} alt={img.alt} className="w-full rounded-2xl" fittingType="fill" style={{ aspectRatio: i % 3 === 0 ? "4/3" : i % 3 === 1 ? "1/1" : "3/4" }} />
-                  <div className="absolute inset-0 flex items-end bg-gradient-to-t from-[#0096ff]/80 via-transparent to-transparent p-5 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                    <span className="font-mono text-xs uppercase tracking-widest text-white">
-                      Session {String(i + 1).padStart(2, "0")}
-                    </span>
-                  </div>
-                </button>
-              </Reveal>
-            ))}
+        <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {SESSIONS.map((s, i) => {
+              const cover = s.images[0];
+              return (
+                <Reveal key={s.slug} delay={(i % 3) * 0.08}>
+                  <Link
+                    to={`/gallery/${s.slug}`}
+                    className="group block h-full overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40 stem-focus"
+                  >
+                    <div className="relative h-52 w-full overflow-hidden">
+                      {cover ? (
+                        <Image
+                          src={cover.src}
+                          alt={cover.alt || s.name}
+                          className="h-full w-full transition-transform duration-500 group-hover:scale-105"
+                          fittingType="fill"
+                        />
+                      ) : (
+                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-[#0096ff]/15 to-[#b4f859]/25">
+                          <div className="text-center">
+                            <Camera className="mx-auto h-9 w-9 text-[#0096ff]/60" />
+                            <p className="mt-2 font-display text-xs font-semibold uppercase tracking-widest text-[#005020]/60">
+                              Photos coming soon
+                            </p>
+                          </div>
+                        </div>
+                      )}
+                    </div>
+                    <div className="flex items-center justify-between gap-3 p-5">
+                      <div>
+                        <h3 className="font-display text-lg font-bold tracking-tight text-[#005020]">{s.name}</h3>
+                        <p className="mt-1 text-sm text-[#555]">{s.date}</p>
+                      </div>
+                      <span className="inline-flex shrink-0 items-center gap-1 rounded-full bg-[#0096ff] px-3 py-1.5 text-xs font-semibold text-white">
+                        View <ArrowRight className="h-3.5 w-3.5" />
+                      </span>
+                    </div>
+                  </Link>
+                </Reveal>
+              );
+            })}
           </div>
         </div>
       </section>
-
-      {/* Lightbox */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
-          role="dialog"
-          aria-modal="true"
-          aria-label="Image viewer"
-        >
-          <button onClick={close} className="absolute right-5 top-5 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white stem-focus hover:bg-white/20" aria-label="Close">
-            <X className="h-6 w-6" />
-          </button>
-          <button onClick={prev} className="absolute left-5 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white stem-focus hover:bg-white/20" aria-label="Previous">
-            <ChevronLeft className="h-6 w-6" />
-          </button>
-          <div className="max-h-[85vh] w-full max-w-3xl">
-            <Image src={IMAGES[active].src} alt={IMAGES[active].alt} className="w-full max-h-[85vh] rounded-xl" fittingType="fit" />
-          </div>
-          <button onClick={next} className="absolute right-5 grid h-11 w-11 place-items-center rounded-full bg-white/10 text-white stem-focus hover:bg-white/20" aria-label="Next">
-            <ChevronRight className="h-6 w-6" />
-          </button>
-        </div>
-      )}
     </>
   );
 }

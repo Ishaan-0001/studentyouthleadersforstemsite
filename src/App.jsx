@@ -15,6 +15,7 @@ import Labs from "@/pages/Labs";
 import Chapters from "@/pages/Chapters";
 import ChapterDetail from "@/pages/ChapterDetail";
 import Gallery from "@/pages/Gallery";
+import SessionDetail from "@/pages/SessionDetail";
 import ExecutiveCouncil from "@/pages/ExecutiveCouncil";
 import Contact from "@/pages/Contact";
 import Apply from "@/pages/Apply";
@@ -55,6 +56,7 @@ const AuthenticatedApp = () => {
         <Route path="/chapters" element={<Chapters />} />
         <Route path="/chapters/:slug" element={<ChapterDetail />} />
         <Route path="/gallery" element={<Gallery />} />
+        <Route path="/gallery/:slug" element={<SessionDetail />} />
         <Route path="/executive-council" element={<ExecutiveCouncil />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/apply" element={<Apply />} />
