@@ -11,7 +11,19 @@ export const SESSIONS = [
   { slug: "shell-shock", name: "Shell Shock", date: "December 16, 2025", images: [] },
   { slug: "magnetic-maze", name: "Magnetic Maze", date: "November 25, 2025", images: [] },
   { slug: "drag-n-drop", name: "Drag N' Drop", date: "November 8, 2025", images: [] },
-  { slug: "creatin-catapults", name: "Creatin' Catapults", date: "October 27, 2025", images: [] },
+  {
+    slug: "crazy-catapults",
+    name: "Crazy Catapults",
+    date: "October 27, 2025",
+    images: [
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/9f272849d_pic22.jpg", alt: "Boy focusing on assembling a craft-stick catapult" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/85d843a68_pic23.jpg", alt: "Gluing together a catapult with a hot glue gun" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3f4f208fc_pic24.jpg", alt: "Group building catapults together at the table" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/a9afed629_pic25.jpg", alt: "Instructor guiding a student launching a catapult" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8653b01d6_pic26.jpg", alt: "Boy building a catapult with a mentor" },
+      { src: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/805a1864c_pic27.jpg", alt: "Close-up of a loaded catapult ready to launch" },
+    ],
+  },
   {
     slug: "building-boats",
     name: "Building Boats",
