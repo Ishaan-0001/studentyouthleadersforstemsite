@@ -78,7 +78,7 @@ export default function About() {
               </p>
             </div>
             <div className="mx-auto mt-12 max-w-5xl">
-              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/ad6afd6b5_pic53.jpg" alt="Group of kids building a coaster together at a community STEM lab" className="w-full h-80 rounded-2xl" fittingType="fill" />
+              <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/05867cf77_pic115.jpg" alt="A workshop full of students building their projects together" className="w-full h-80 rounded-2xl" fittingType="fill" />
             </div>
           </Reveal>
         </div>
