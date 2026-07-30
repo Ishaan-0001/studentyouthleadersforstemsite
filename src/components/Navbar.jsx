@@ -20,8 +20,8 @@ const NAV = [
     to: "/chapters",
     children: [
       { label: "All Chapters", to: "/chapters" },
-      { label: "Belmont (MA)", to: "/chapters/belmont" },
       { label: "Grafton (MA)", to: "/chapters/grafton" },
+      { label: "Belmont (MA)", to: "/chapters/belmont" },
       { label: "Stoughton (MA)", to: "/chapters/stoughton" },
       { label: "Torrance (CA)", to: "/chapters/torrance" },
     ],
