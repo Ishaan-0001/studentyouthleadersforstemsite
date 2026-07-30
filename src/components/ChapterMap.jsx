@@ -7,7 +7,7 @@ const STATES_GEOJSON_URL =
   "https://raw.githubusercontent.com/PublicaMundi/MappingGISData/master/geojson/us-states.json";
 
 const pinSvg = `
-  <svg width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.5))">
+  <svg width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.55))">
     <path d="M17 0C7.6 0 0 7.6 0 17c0 11.9 17 27 17 27s17-15.1 17-27C34 7.6 26.4 0 17 0z" fill="#005020"/>
     <path d="M17 2C8.7 2 2 8.7 2 17c0 10.5 15 23.8 15 23.8S32 27.5 32 17C32 8.7 25.3 2 17 2z" fill="#0096ff"/>
     <circle cx="17" cy="17" r="7.5" fill="#fff"/>
@@ -23,11 +23,11 @@ const pinIcon = L.divIcon({
 });
 
 const geoStyle = {
-  fillColor: "#006400",
-  fillOpacity: 0.55,
+  fillColor: "#0a5c2e",
+  fillOpacity: 1,
   color: "#b4f859",
   weight: 1.5,
-  opacity: 0.8,
+  opacity: 0.85,
 };
 
 export default function ChapterMap({ chapters }) {
@@ -43,6 +43,9 @@ export default function ChapterMap({ chapters }) {
   return (
     <>
       <style>{`
+        .stem-map .leaflet-container {
+          background: #0a3d62;
+        }
         .stem-popup .leaflet-popup-content-wrapper {
           border-radius: 12px;
           box-shadow: 0 8px 24px rgba(0,0,0,0.4);
@@ -51,20 +54,18 @@ export default function ChapterMap({ chapters }) {
       <MapContainer
         center={[39, -97]}
         zoom={4}
-        minZoom={3}
-        maxZoom={11}
+        minZoom={2}
+        maxZoom={12}
         scrollWheelZoom={false}
         zoomControl={false}
-        maxBounds={[[-5, -170], [75, -50]]}
-        maxBoundsViscosity={0.8}
-        className="h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
-        style={{ background: "#1a1a1a" }}
+        className="stem-map h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
+        style={{ background: "#0a3d62" }}
       >
+        {statesGeo && <GeoJSON data={statesGeo} style={geoStyle} />}
         <TileLayer
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-          url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+          url="https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png"
         />
-        {statesGeo && <GeoJSON data={statesGeo} style={geoStyle} />}
         <ZoomControl position="bottomright" />
         {chapters.map((ch) => (
           <Marker key={ch.slug} position={[ch.lat, ch.lng]} icon={pinIcon}>
