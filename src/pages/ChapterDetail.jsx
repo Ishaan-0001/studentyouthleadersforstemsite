@@ -1,10 +1,10 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import { CtaPill } from "@/components/GreenHero";
+import VolunteerCard from "@/components/VolunteerCard";
 import { CHAPTERS } from "@/pages/Chapters";
 
 export default function ChapterDetail() {
@@ -16,59 +16,84 @@ export default function ChapterDetail() {
       <div className="mx-auto max-w-2xl px-5 py-40 text-center">
         <h1 className="font-display text-3xl font-bold">Chapter not found</h1>
         <p className="mt-4 text-[#555]">We couldn't find that chapter.</p>
-        <Link to="/chapters" className="mt-6 inline-block text-[#005020] font-semibold underline">← Back to all chapters</Link>
+        <Link to="/chapters" className="mt-6 inline-block text-[#005020] font-semibold underline">
+          ← Back to all chapters
+        </Link>
       </div>
     );
   }
 
+  const description = chapter.description || [chapter.blurb];
+  const volunteers = chapter.volunteers || [];
+
   return (
     <>
+      {/* Hero header */}
       <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-20 pt-36 lg:px-8 lg:pb-28 lg:pt-44">
-          <div className="grid items-center gap-12 lg:grid-cols-2">
-            <Reveal>
-              <p className="mb-4 flex items-center gap-2 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
-                <MapPin className="h-4 w-4" /> {chapter.state}
-              </p>
-              <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
-                {chapter.name} ({chapter.state})
-              </h1>
-              <p className="mt-6 max-w-xl text-lg leading-relaxed text-white/80">{chapter.blurb}</p>
-            </Reveal>
-            <Reveal delay={0.1}>
-              {/* IMAGE SLOT — chapter detail lab photo */}
-              <ImagePlaceholder slot={chapter.slot} label={`${chapter.label} — detail page`} ratio="landscape" />
-            </Reveal>
-          </div>
+        <div className="relative mx-auto max-w-4xl px-5 pb-20 pt-36 text-center lg:px-8 lg:pb-24 lg:pt-44">
+          <Reveal>
+            <p className="mb-4 flex items-center justify-center gap-2 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
+              <MapPin className="h-4 w-4" /> {chapter.state}
+            </p>
+            <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
+              {chapter.name} ({chapter.state})
+            </h1>
+          </Reveal>
         </div>
       </section>
       <WaveDivider from="#0096ff" to="#FFFFFF" />
 
+      {/* Bio section */}
       <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-5 py-24 lg:px-8 lg:py-32">
+        <div className="mx-auto max-w-3xl px-5 py-24 lg:px-8 lg:py-28">
           <Reveal>
-            <h2 className="font-display text-3xl font-extrabold leading-tight tracking-tight sm:text-4xl text-balance">
-              About the {chapter.name} chapter
-            </h2>
-            {/* Replace the placeholder body below with real chapter details (schedule, venue, lab topics, contact). */}
-            <p className="mt-6 text-lg leading-relaxed text-[#555]">
-              {chapter.blurb} This chapter hosts recurring lab sessions for K-6 students,
-              led by local student volunteers who design every activity from scratch.
-            </p>
-            <p className="mt-5 text-lg leading-relaxed text-[#555]">
-              To register your child for an upcoming session at this chapter, complete the
-              registration form — a volunteer will follow up with session dates and details.
-            </p>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <CtaPill to="/registration" variant="green">Register Now</CtaPill>
-              <Link to="/chapters" className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white">
+            <div className="space-y-6 text-center">
+              {description.map((p, i) => (
+                <p key={i} className="text-lg leading-relaxed text-[#333]">
+                  {p}
+                </p>
+              ))}
+            </div>
+            <div className="mt-10 flex flex-wrap justify-center gap-4">
+              <CtaPill to="/registration" variant="green">
+                Register Now
+              </CtaPill>
+              <Link
+                to="/chapters"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
+              >
                 <ArrowLeft className="h-4 w-4" /> All Chapters
               </Link>
             </div>
           </Reveal>
         </div>
       </section>
+
+      {/* Volunteers */}
+      {volunteers.length > 0 && (
+        <>
+          <section className="relative bg-[#0096ff] text-white">
+            <div className="circuit-pattern absolute inset-0 opacity-50" aria-hidden="true" />
+            <div className="relative mx-auto max-w-7xl px-5 py-12 text-center lg:px-8">
+              <h2 className="font-display text-2xl font-extrabold uppercase tracking-[0.2em] sm:text-3xl">
+                Our Volunteers
+              </h2>
+            </div>
+          </section>
+          <section className="bg-white">
+            <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
+              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+                {volunteers.map((v, i) => (
+                  <Reveal key={v.name} delay={i * 0.05}>
+                    <VolunteerCard name={v.name} role={v.role} />
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        </>
+      )}
     </>
   );
 }
