@@ -38,6 +38,21 @@ export const CHAPTERS = [
     ],
   },
   {
+    slug: "belmont",
+    name: "Belmont",
+    state: "MA",
+    lat: 42.396,
+    lng: -71.179,
+    slot: "Slot #13",
+    label: "Chapter — Belmont, MA lab photo",
+    blurb: "Bringing hands-on STEM labs to students in Belmont, Massachusetts, in partnership with local schools and community spaces.",
+    description: [
+      "The Belmont (MA) chapter brings SY-STEM's student-led labs to young learners across the community, in partnership with local schools and community spaces.",
+      "Volunteers here design every activity from scratch, giving K-6 students a hands-on, curiosity-driven introduction to science, technology, engineering, and math.",
+    ],
+    volunteers: [],
+  },
+  {
     slug: "stoughton",
     name: "Stoughton",
     state: "MA",
