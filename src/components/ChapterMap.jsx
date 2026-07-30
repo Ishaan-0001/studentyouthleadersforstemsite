@@ -29,11 +29,11 @@ export default function ChapterMap({ chapters }) {
       scrollWheelZoom={false}
       zoomControl={false}
       className="h-[460px] w-full overflow-hidden rounded-3xl border border-[#005020]/10 shadow-xl"
-      style={{ background: "#0a2a1a" }}
+      style={{ background: "#aadaff" }}
     >
       <TileLayer
         attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+        url="https://{s}.basemaps.cartocdn.com/voyager/{z}/{x}/{y}{r}.png"
       />
       <ZoomControl position="bottomright" />
       {chapters.map((ch) => (
