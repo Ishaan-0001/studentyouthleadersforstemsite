@@ -80,10 +80,6 @@ export default function ChapterMap({ chapters }) {
       >
         {worldGeo && <GeoJSON data={worldGeo} style={worldStyle} />}
         {statesGeo && <GeoJSON data={statesGeo} style={stateStyle} />}
-        <TileLayer
-          attribution='&copy; OpenStreetMap contributors &copy; CARTO'
-          url="https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png"
-        />
         <ZoomControl position="bottomright" />
         {chapters.map((ch) => (
           <Marker key={ch.slug} position={[ch.lat, ch.lng]} icon={pinIcon}>
