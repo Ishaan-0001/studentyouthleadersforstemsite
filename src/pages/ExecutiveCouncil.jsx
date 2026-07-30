@@ -1,6 +1,6 @@
 import React from "react";
 import { Image } from "@/components/ui/image";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import InitialsAvatar from "@/components/InitialsAvatar";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 
@@ -60,7 +60,7 @@ export default function ExecutiveCouncil() {
                       <Image src={m.photo} alt={m.name} fittingType="fill" className="h-full w-full" />
                     </div>
                   ) : (
-                    <ImagePlaceholder slot={m.slot} label={`Board Member — ${m.name}`} ratio="square" className="rounded-none" />
+                    <InitialsAvatar name={m.name} />
                   )}
                   <div className="p-5 text-center">
                     <h3 className="font-display text-lg font-bold tracking-tight text-[#005020]">{m.name}</h3>
@@ -94,7 +94,7 @@ export default function ExecutiveCouncil() {
                       <Image src={c.photo} alt={c.head} fittingType="fill" className="h-full w-full" />
                     </div>
                   ) : (
-                    <ImagePlaceholder slot={c.slot} label={`Chapter Head — ${c.chapter}`} ratio="square" className="rounded-none" />
+                    <InitialsAvatar name={c.head} />
                   )}
                   <div className="p-5 text-center">
                     <h3 className="font-display text-lg font-bold tracking-tight text-[#005020]">{c.head}</h3>
