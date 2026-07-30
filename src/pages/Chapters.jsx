@@ -15,7 +15,7 @@ export const CHAPTERS = [
     lng: -71.687,
     slot: "Slot #14",
     label: "Chapter — Grafton, MA lab photo",
-    image: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/79ee4a412_pic7.jpg",
+    image: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/127daa70a_pic33.jpg",
     blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions.",
     description: [
       "The Grafton (MA) chapter serves as the founding chapter of SY-STEM, launched by four dedicated high school students: Ayush Ayyagari, Tanmay Jain, Ishaan Pradhan, and Om Anish Kadiyam.",
@@ -28,7 +28,7 @@ export const CHAPTERS = [
       { name: "Om Anish Kadiyam", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3a98ddeab_omanishkadiyam.jpg" },
       { name: "Ayush Ayyagari", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3da05ab1d_ayushimage.jpg" },
       { name: "Ishaan Pradhan", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29f0abc81_ishaanimage.jpg" },
-      { name: "Tanmay Jain" },
+      { name: "Tanmay Jain", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/85d843a68_pic23.jpg" },
       { name: "Dhruv Patel" },
       { name: "Mohammad Golji" },
       { name: "Gagan Nallani" },
