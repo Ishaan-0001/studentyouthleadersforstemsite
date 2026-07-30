@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, ExternalLink, Instagram, Linkedin } from "lucide-react";
+import { Mail, ExternalLink, Instagram } from "lucide-react";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
@@ -53,11 +53,7 @@ export default function Contact() {
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Instagram className="h-5 w-5" /></span>
-                    <span className="text-sm text-white/60">@system (placeholder)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Linkedin className="h-5 w-5" /></span>
-                    <span className="text-sm text-white/60">SY-STEM (placeholder)</span>
+                    <a href="https://www.instagram.com/systemlabsusa/" target="_blank" rel="noopener noreferrer" className="stem-focus rounded text-sm hover:text-[#b4f859]">@systemlabsusa</a>
                   </li>
                 </ul>
                 <div className="mt-10">
