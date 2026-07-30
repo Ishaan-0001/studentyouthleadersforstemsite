@@ -48,7 +48,7 @@ export default function Labs() {
           </Reveal>
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {[
-              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/0e18d29e0_pic68.jpg", alt: "Group of students building a bridge together around the table", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
+              { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/0e18d29e0_pic68.png", alt: "Group of students building a bridge together around the table", title: "Flexible, open-ended activities", body: "No two labs feel the same, and neither should two students' experiences. Each lab is crafted with creativity in mind, so students feel their success is theirs — not the directions'." },
               { img: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/a9afed629_pic25.jpg", alt: "Student leader guiding a peer through a catapult launch", title: "Led by student leaders", body: "Our volunteers create curriculums, gather supplies, and run the labs. Being students themselves, they teach like they want to be taught — from a learner's perspective." },
             ].map((item, i) => (
               <Reveal key={item.title} delay={i * 0.1}>
