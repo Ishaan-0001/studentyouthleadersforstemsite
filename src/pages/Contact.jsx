@@ -49,7 +49,7 @@ export default function Contact() {
                 <ul className="mt-8 space-y-5 text-white/90">
                   <li className="flex items-center gap-3">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Mail className="h-5 w-5" /></span>
-                    <a href="mailto:contact@system.org" className="stem-focus rounded hover:text-[#b4f859]">contact@system.org</a>
+                    <a href="mailto:studentyouthleadersforstem@gmail.com" className="stem-focus rounded hover:text-[#b4f859]">studentyouthleadersforstem@gmail.com</a>
                   </li>
                   <li className="flex items-center gap-3">
                     <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Instagram className="h-5 w-5" /></span>
