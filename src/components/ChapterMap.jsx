@@ -5,6 +5,8 @@ import "leaflet/dist/leaflet.css";
 
 const STATES_GEOJSON_URL =
   "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
+const WORLD_GEOJSON_URL =
+  "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
 
 const pinSvg = `
   <svg width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.55))">
@@ -22,22 +24,35 @@ const pinIcon = L.divIcon({
   popupAnchor: [0, -38],
 });
 
-const geoStyle = {
+const worldStyle = {
   fillColor: "#0a5c2e",
   fillOpacity: 1,
   color: "#b4f859",
+  weight: 1,
+  opacity: 0.7,
+};
+
+const stateStyle = {
+  fillColor: "#0e6b35",
+  fillOpacity: 1,
+  color: "#b4f859",
   weight: 1.5,
-  opacity: 0.85,
+  opacity: 0.9,
 };
 
 export default function ChapterMap({ chapters }) {
   const [statesGeo, setStatesGeo] = useState(null);
+  const [worldGeo, setWorldGeo] = useState(null);
 
   useEffect(() => {
     fetch(STATES_GEOJSON_URL)
       .then((res) => res.json())
       .then(setStatesGeo)
       .catch(() => setStatesGeo(null));
+    fetch(WORLD_GEOJSON_URL)
+      .then((res) => res.json())
+      .then(setWorldGeo)
+      .catch(() => setWorldGeo(null));
   }, []);
 
   return (
@@ -54,14 +69,17 @@ export default function ChapterMap({ chapters }) {
       <MapContainer
         center={[39, -97]}
         zoom={4}
-        minZoom={2}
-        maxZoom={12}
+        minZoom={3}
+        maxZoom={11}
         scrollWheelZoom={false}
         zoomControl={false}
+        maxBounds={[[-15, -180], [75, -30]]}
+        maxBoundsViscosity={0.9}
         className="stem-map h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
         style={{ background: "#0a3d62" }}
       >
-        {statesGeo && <GeoJSON data={statesGeo} style={geoStyle} />}
+        {worldGeo && <GeoJSON data={worldGeo} style={worldStyle} />}
+        {statesGeo && <GeoJSON data={statesGeo} style={stateStyle} />}
         <TileLayer
           attribution='&copy; OpenStreetMap contributors &copy; CARTO'
           url="https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png"
