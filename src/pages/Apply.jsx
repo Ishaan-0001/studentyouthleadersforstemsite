@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&usp=header";
+const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&usp=dialog";
 
 export default function Apply() {
   const ready = VOLUNTEER_FORM_URL && !VOLUNTEER_FORM_URL.includes("PASTE_YOUR");
