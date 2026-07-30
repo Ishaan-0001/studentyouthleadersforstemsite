@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&v=2";
+const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&v=3";
 
 export default function Apply() {
   const ready = VOLUNTEER_FORM_URL && !VOLUNTEER_FORM_URL.includes("PASTE_YOUR");
@@ -50,7 +50,6 @@ export default function Apply() {
                   title="SY-STEM Volunteer Application"
                   src={VOLUNTEER_FORM_URL}
                   className="h-[900px] w-full border-0"
-                  sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
                   loading="lazy"
                 >
                   Loading the application form…
