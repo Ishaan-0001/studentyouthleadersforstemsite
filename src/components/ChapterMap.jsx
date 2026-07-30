@@ -73,8 +73,8 @@ export default function ChapterMap({ chapters }) {
         maxZoom={11}
         scrollWheelZoom={false}
         zoomControl={false}
-        maxBounds={[[-15, -180], [75, -30]]}
-        maxBoundsViscosity={0.9}
+        maxBounds={[[-85, -180], [85, 180]]}
+        maxBoundsViscosity={1}
         className="stem-map h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
         style={{ background: "#0a3d62" }}
       >
