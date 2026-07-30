@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
 import { Image } from "@/components/ui/image";
+import Logo from "@/components/Logo";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 import ChapterMap from "@/components/ChapterMap";
@@ -159,7 +159,9 @@ export default function Chapters() {
                   {ch.cardImage ? (
                     <Image src={ch.cardImage} alt={`${ch.name} lab photo`} fittingType="fill" className="aspect-[3/2] w-full" />
                   ) : (
-                    <ImagePlaceholder slot={ch.slot} label={ch.label} ratio="landscape" className="rounded-none" />
+                    <div className="flex aspect-[3/2] w-full items-center justify-center bg-[#F2FBFF]">
+                      <Logo className="h-20 w-20 text-[#0096ff]/25" />
+                    </div>
                   )}
                   <div className="relative p-7">
                     <h3 className="font-display text-2xl font-bold tracking-tight text-[#005020]">
