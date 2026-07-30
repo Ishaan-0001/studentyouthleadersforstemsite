@@ -45,12 +45,16 @@ export const CHAPTERS = [
     lng: -71.179,
     slot: "Slot #13",
     label: "Chapter — Belmont, MA lab photo",
-    blurb: "Bringing hands-on STEM labs to students in Belmont, Massachusetts, in partnership with local schools and community spaces.",
+    blurb: "Driven by passionate volunteers, the Belmont chapter expands SY-STEM's mission by providing free, hands-on STEM labs for youth in Belmont, Lexington, Rutherford, and surrounding communities.",
     description: [
-      "The Belmont (MA) chapter brings SY-STEM's student-led labs to young learners across the community, in partnership with local schools and community spaces.",
-      "Volunteers here design every activity from scratch, giving K-6 students a hands-on, curiosity-driven introduction to science, technology, engineering, and math.",
+      "Driven by passionate volunteers, the Belmont chapter expands SY-STEM's mission by providing free, hands-on STEM labs for youth in Belmont, Lexington, Rutherford, and surrounding communities.",
+      "This chapter makes it possible for SY-STEM's educational outreach to span across Massachusetts, bringing interactive learning to students across the state.",
     ],
-    volunteers: [],
+    volunteers: [
+      { name: "Ben Qin", role: "Chapter Head" },
+      { name: "Arun Lenhart" },
+      { name: "Rocco Choe" },
+    ],
   },
   {
     slug: "stoughton",
@@ -60,12 +64,17 @@ export const CHAPTERS = [
     lng: -71.103,
     slot: "Slot #15",
     label: "Chapter — Stoughton, MA lab photo",
-    blurb: "The Stoughton chapter connects Massachusetts students with student-led STEM experiences close to home.",
+    blurb: "Powered by passionate volunteers, our Stoughton chapter delivers free, hands-on STEM labs to youth in Stoughton, Canton, Sharon, and the surrounding towns.",
     description: [
-      "The Stoughton (MA) chapter connects Massachusetts students with student-led STEM experiences close to home.",
-      "Local volunteers run recurring lab sessions that give K-6 learners a hands-on, curiosity-first introduction to science, technology, engineering, and math.",
+      "Powered by passionate volunteers, our Stoughton chapter delivers free, hands-on STEM labs to youth in Stoughton, Canton, Sharon, and the surrounding towns.",
+      "The chapter expands SY-STEM's impact across Massachusetts and inspiring the next generation of problem solvers.",
     ],
-    volunteers: [],
+    volunteers: [
+      { name: "Ethan Tran", role: "Chapter Head" },
+      { name: "Henrique Dos Santos" },
+      { name: "Liam Machula" },
+      { name: "Sam Issa" },
+    ],
   },
   {
     slug: "torrance",
@@ -75,12 +84,16 @@ export const CHAPTERS = [
     lng: -118.343,
     slot: "Slot #16",
     label: "Chapter — Torrance, CA lab photo",
-    blurb: "Our Torrance chapter brings SY-STEM's student-led labs to young learners across Southern California.",
+    blurb: "Led by local volunteers who love what they do, our Torrance chapter opens up worlds of discovery with free, hands-on STEM labs for youth in Torrance, Lomita, Carson, and beyond.",
     description: [
-      "The Torrance (CA) chapter brings SY-STEM's student-led labs to young learners across Southern California.",
-      "Volunteers design and lead every session, making hands-on STEM accessible to K-6 students throughout the community.",
+      "Led by local volunteers who love what they do, our Torrance chapter opens up worlds of discovery with free, hands-on STEM labs for youth in Torrance, Lomita, Carson, and beyond.",
+      "Every workshop helps stretch SY-STEM's reach across Southern California, empowering the thinkers and creators of tomorrow.",
     ],
-    volunteers: [],
+    volunteers: [
+      { name: "Amogh Urs", role: "Chapter Head" },
+      { name: "Aidan Woo" },
+      { name: "Paulo Mazarkis" },
+    ],
   },
 ];
 
