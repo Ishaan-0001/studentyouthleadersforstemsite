@@ -61,22 +61,25 @@ export default function ChapterMap({ chapters }) {
   }, []);
 
   useEffect(() => {
-    fetch(STATES_GEOJSON_URL)
-      .then((res) => res.json())
-      .then(setStatesGeo)
-      .catch(() => setStatesGeo(null));
-    fetch(CANADA_GEOJSON_URL)
-      .then((res) => res.json())
-      .then(setCanadaGeo)
-      .catch(() => setCanadaGeo(null));
-    fetch(MEXICO_GEOJSON_URL)
-      .then((res) => res.json())
-      .then(setMexicoGeo)
-      .catch(() => setMexicoGeo(null));
-    fetch(WORLD_GEOJSON_URL)
-      .then((res) => res.json())
-      .then(setWorldGeo)
-      .catch(() => setWorldGeo(null));
+    const fetchWithRetry = (url, setter, retries = 2) => {
+      fetch(url)
+        .then((res) => {
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          return res.json();
+        })
+        .then(setter)
+        .catch((err) => {
+          if (retries > 0) {
+            setTimeout(() => fetchWithRetry(url, setter, retries - 1), 1000);
+          } else {
+            setter(null);
+          }
+        });
+    };
+    fetchWithRetry(STATES_GEOJSON_URL, setStatesGeo);
+    fetchWithRetry(CANADA_GEOJSON_URL, setCanadaGeo);
+    fetchWithRetry(MEXICO_GEOJSON_URL, setMexicoGeo);
+    fetchWithRetry(WORLD_GEOJSON_URL, setWorldGeo);
   }, []);
 
   return (
