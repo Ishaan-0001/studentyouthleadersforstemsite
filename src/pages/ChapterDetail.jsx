@@ -46,11 +46,11 @@ export default function ChapterDetail() {
 
       {/* Bio section */}
       <section className="bg-white">
-        <div className="mx-auto max-w-3xl px-5 py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-5xl px-5 py-24 lg:px-8 lg:py-28">
           <Reveal>
-            <div className="space-y-6 text-center">
+            <div className="space-y-6 rounded-3xl border border-[#b4f859]/40 bg-gradient-to-br from-[#F2FBFF] to-[#eafdf0] px-6 py-12 text-center shadow-sm lg:px-16 lg:py-16">
               {description.map((p, i) => (
-                <p key={i} className="text-lg leading-relaxed text-[#333]">
+                <p key={i} className="text-lg leading-relaxed text-[#005020]">
                   {p}
                 </p>
               ))}
