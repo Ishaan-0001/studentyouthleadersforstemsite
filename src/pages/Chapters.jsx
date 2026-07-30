@@ -49,9 +49,9 @@ export default function Chapters() {
               </p>
             </div>
           </Reveal>
-          <Reveal delay={0.1} className="mt-10">
+          <div className="mt-10">
             <ChapterMap chapters={CHAPTERS} />
-          </Reveal>
+          </div>
         </div>
       </section>
 

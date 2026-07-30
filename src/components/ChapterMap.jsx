@@ -62,21 +62,33 @@ export default function ChapterMap({ chapters }) {
         .stem-map .leaflet-container {
           background: #0a3d62;
         }
+        .stem-map {
+          z-index: 0;
+        }
+        .stem-map .leaflet-pane,
+        .stem-map .leaflet-control,
+        .stem-map .leaflet-top,
+        .stem-map .leaflet-bottom {
+          z-index: 1 !important;
+        }
         .stem-popup .leaflet-popup-content-wrapper {
           border-radius: 12px;
           box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        }
+        .stem-popup {
+          z-index: 1 !important;
         }
       `}</style>
       <MapContainer
         center={[39, -97]}
         zoom={4}
         minZoom={3}
-        maxZoom={11}
+        maxZoom={8}
         scrollWheelZoom={false}
         zoomControl={false}
-        maxBounds={[[-85, -180], [85, 180]]}
+        maxBounds={[[5, -170], [72, -45]]}
         maxBoundsViscosity={1}
-        className="stem-map h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
+        className="stem-map relative h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
         style={{ background: "#0a3d62" }}
       >
         {worldGeo && <GeoJSON data={worldGeo} style={worldStyle} />}
