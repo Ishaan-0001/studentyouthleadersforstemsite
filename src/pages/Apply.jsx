@@ -44,41 +44,14 @@ export default function Apply() {
               organization. Complete the application below to join us.
             </p>
 
-            <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
-              {ready ? (
-                <iframe
-                  title="SY-STEM Volunteer Application"
-                  src={VOLUNTEER_FORM_URL}
-                  className="h-[900px] w-full border-0"
-                  loading="lazy"
-                >
-                  Loading the application form…
-                </iframe>
-              ) : (
-                <div className="flex flex-col items-center justify-center gap-4 px-6 py-32 text-center">
-                  <p className="font-display text-xl font-bold text-[#005020]">
-                    Volunteer application coming soon
-                  </p>
-                  <p className="max-w-md text-[15px] text-[#555]">
-                    The SY-STEM team is finalizing the volunteer application form. Once the
-                    Google Form URL is added, the application will appear right here.
-                  </p>
-                </div>
-              )}
+            <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-[#F2FBFF] px-6 py-32 text-center shadow-2xl ring-1 ring-black/5">
+              <p className="font-display text-xl font-bold text-[#005020]">
+                Volunteer application coming soon
+              </p>
+              <p className="max-w-md text-[15px] text-[#555]">
+                The SY-STEM team is finalizing the volunteer application form. Check back soon to apply!
+              </p>
             </div>
-
-            {ready && (
-              <div className="mt-8 text-center">
-                <a
-                  href={VOLUNTEER_FORM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
-                >
-                  Open Application in New Tab <ExternalLink className="h-4 w-4" />
-                </a>
-              </div>
-            )}
           </Reveal>
         </div>
       </section>
