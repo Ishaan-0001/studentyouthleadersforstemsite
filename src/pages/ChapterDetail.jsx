@@ -46,9 +46,9 @@ export default function ChapterDetail() {
 
       {/* Bio section */}
       <section className="bg-white">
-        <div className="mx-auto max-w-5xl px-5 py-24 lg:px-8 lg:py-28">
+        <div className="mx-auto max-w-6xl px-5 py-12 lg:px-8 lg:py-16">
           <Reveal>
-            <div className="space-y-6 rounded-3xl border border-[#b4f859]/40 bg-gradient-to-br from-[#F2FBFF] to-[#eafdf0] px-6 py-12 text-center shadow-sm lg:px-16 lg:py-16">
+            <div className="space-y-4 rounded-3xl border border-[#b4f859]/40 bg-gradient-to-br from-[#F2FBFF] to-[#eafdf0] px-6 py-8 text-center shadow-sm lg:px-14 lg:py-10">
               {description.map((p, i) => (
                 <p key={i} className="text-lg leading-relaxed text-[#005020]">
                   {p}
@@ -82,8 +82,8 @@ export default function ChapterDetail() {
             </div>
           </section>
           <section className="bg-white">
-            <div className="mx-auto max-w-7xl px-5 py-16 lg:px-8 lg:py-20">
-              <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
+            <div className="mx-auto max-w-7xl px-5 py-12 lg:px-8 lg:py-14">
+              <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-4">
                 {volunteers.map((v, i) => (
                   <Reveal key={v.name} delay={i * 0.05}>
                     <VolunteerCard name={v.name} role={v.role} photo={v.photo} />
