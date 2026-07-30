@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { MapContainer, TileLayer, Marker, Popup, ZoomControl, GeoJSON } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
@@ -85,7 +86,9 @@ export default function ChapterMap({ chapters }) {
           <Marker key={ch.slug} position={[ch.lat, ch.lng]} icon={pinIcon}>
             <Popup className="stem-popup">
               <div className="font-display text-sm font-bold text-[#005020]">{ch.name}, {ch.state}</div>
-              <div className="text-xs font-medium text-[#0096ff]">SY-STEM Chapter</div>
+              <Link to={`/chapters/${ch.slug}`} className="text-xs font-semibold text-[#0096ff] hover:underline">
+                View Chapter Page →
+              </Link>
             </Popup>
           </Marker>
         ))}
