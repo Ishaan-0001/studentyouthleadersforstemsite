@@ -3,6 +3,7 @@ import { Mail, ExternalLink, Instagram } from "lucide-react";
 import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
+import GoogleFormEmbed from "@/components/GoogleFormEmbed";
 
 // ════════════════════════════════════════════════════════════════════
 // STEP 1: Paste your Google Contact Form embed URL here.
@@ -71,27 +72,22 @@ export default function Contact() {
                 <p className="mt-3 text-[15px] leading-relaxed text-[#555]">
                   Fill out the form below and we'll be in touch.
                 </p>
-                <div className="mt-7 overflow-hidden rounded-2xl bg-white ring-1 ring-black/5">
-                  {ready ? (
-                    <iframe
-                      title="SY-STEM Contact Form"
-                      src={CONTACT_FORM_URL}
-                      className="h-[920px] w-full border-0 sm:h-[760px] lg:h-[700px]"
-                      loading="lazy"
-                    >
-                      Loading the contact form…
-                    </iframe>
-                  ) : (
-                    <div className="flex flex-col items-center justify-center gap-4 px-6 py-24 text-center">
-                      <p className="font-display text-lg font-bold text-[#005020]">
-                        Contact form coming soon
-                      </p>
-                      <p className="max-w-sm text-[15px] text-[#555]">
-                        Once the Google Contact Form URL is added, the form will appear here.
-                      </p>
-                    </div>
-                  )}
-                </div>
+                {ready ? (
+                  <GoogleFormEmbed
+                    src={CONTACT_FORM_URL}
+                    title="SY-STEM Contact Form"
+                    heightClass="h-[920px] sm:h-[760px] lg:h-[700px]"
+                  />
+                ) : (
+                  <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-[#F2FBFF] px-6 py-24 text-center ring-1 ring-black/5">
+                    <p className="font-display text-lg font-bold text-[#005020]">
+                      Contact form coming soon
+                    </p>
+                    <p className="max-w-sm text-[15px] text-[#555]">
+                      Once the Google Contact Form URL is added, the form will appear here.
+                    </p>
+                  </div>
+                )}
                 {ready && (
                   <div className="mt-6">
                     <a

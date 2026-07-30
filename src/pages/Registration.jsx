@@ -2,6 +2,7 @@ import React from "react";
 import { ExternalLink } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
+import GoogleFormEmbed from "@/components/GoogleFormEmbed";
 
 // ════════════════════════════════════════════════════════════════════
 // STEP 1: Paste your Google Form embed URL here.
@@ -44,29 +45,24 @@ export default function Registration() {
             </p>
 
             {/* Floating Laboratory container — the embedded Google Form */}
-            <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
-              {ready ?
-              <iframe
-                title="SY-STEM Registration Form"
+            {ready ? (
+              <GoogleFormEmbed
                 src={REGISTRATION_FORM_URL}
-                className="h-[850px] w-full border-0"
-                sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
-                loading="lazy">
-                
-                  Loading the registration form…
-                </iframe> :
-
-              <div className="flex flex-col items-center justify-center gap-4 px-6 py-32 text-center">
-                  <p className="font-display text-xl font-bold text-[#005020]">
-                    Registration form coming soon
-                  </p>
-                  <p className="max-w-md text-[15px] text-[#555]">
-                    The SY-STEM team is finalizing the registration form. Once the Google Form
-                    URL is added, the form will appear right here.
-                  </p>
-                </div>
-              }
-            </div>
+                title="SY-STEM Registration Form"
+                heightClass="h-[850px]"
+                className="shadow-2xl"
+              />
+            ) : (
+              <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-[#F2FBFF] px-6 py-32 text-center ring-1 ring-black/5">
+                <p className="font-display text-xl font-bold text-[#005020]">
+                  Registration form coming soon
+                </p>
+                <p className="max-w-md text-[15px] text-[#555]">
+                  The SY-STEM team is finalizing the registration form. Once the Google Form
+                  URL is added, the form will appear right here.
+                </p>
+              </div>
+            )}
 
             {ready &&
             <div className="mt-8 text-center">

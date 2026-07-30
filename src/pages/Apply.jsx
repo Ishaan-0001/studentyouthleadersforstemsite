@@ -2,6 +2,7 @@ import React from "react";
 import { ExternalLink } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
+import GoogleFormEmbed from "@/components/GoogleFormEmbed";
 
 // ════════════════════════════════════════════════════════════════════
 // STEP 1: Paste your volunteer application Google Form embed URL here.
@@ -44,16 +45,12 @@ export default function Apply() {
               organization. Complete the application below to join us.
             </p>
 
-            <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
-              <iframe
-                title="SY-STEM Volunteer Application"
-                src={VOLUNTEER_FORM_URL}
-                className="h-[900px] w-full border-0"
-                loading="lazy"
-              >
-                Loading the application form…
-              </iframe>
-            </div>
+            <GoogleFormEmbed
+              src={VOLUNTEER_FORM_URL}
+              title="SY-STEM Volunteer Application"
+              heightClass="h-[900px]"
+              className="shadow-2xl"
+            />
 
             <div className="mt-8 text-center">
               <a
