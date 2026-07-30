@@ -6,6 +6,10 @@ import "leaflet/dist/leaflet.css";
 
 const STATES_GEOJSON_URL =
   "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
+const CANADA_GEOJSON_URL =
+  "https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/canada.geojson";
+const MEXICO_GEOJSON_URL =
+  "https://raw.githubusercontent.com/strotgen/mexico-leaflet/3860e51338d905d77a8fcbebcbb1fcdcf6930e43/states.geojson";
 const WORLD_GEOJSON_URL =
   "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
 
@@ -43,6 +47,8 @@ const stateStyle = {
 
 export default function ChapterMap({ chapters }) {
   const [statesGeo, setStatesGeo] = useState(null);
+  const [canadaGeo, setCanadaGeo] = useState(null);
+  const [mexicoGeo, setMexicoGeo] = useState(null);
   const [worldGeo, setWorldGeo] = useState(null);
 
   useEffect(() => {
@@ -50,6 +56,14 @@ export default function ChapterMap({ chapters }) {
       .then((res) => res.json())
       .then(setStatesGeo)
       .catch(() => setStatesGeo(null));
+    fetch(CANADA_GEOJSON_URL)
+      .then((res) => res.json())
+      .then(setCanadaGeo)
+      .catch(() => setCanadaGeo(null));
+    fetch(MEXICO_GEOJSON_URL)
+      .then((res) => res.json())
+      .then(setMexicoGeo)
+      .catch(() => setMexicoGeo(null));
     fetch(WORLD_GEOJSON_URL)
       .then((res) => res.json())
       .then(setWorldGeo)
@@ -93,6 +107,8 @@ export default function ChapterMap({ chapters }) {
       >
         {worldGeo && <GeoJSON data={worldGeo} style={worldStyle} />}
         {statesGeo && <GeoJSON data={statesGeo} style={stateStyle} />}
+        {canadaGeo && <GeoJSON data={canadaGeo} style={stateStyle} />}
+        {mexicoGeo && <GeoJSON data={mexicoGeo} style={stateStyle} />}
         <ZoomControl position="bottomright" />
         {chapters.map((ch) => (
           <Marker key={ch.slug} position={[ch.lat, ch.lng]} icon={pinIcon}>
