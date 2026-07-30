@@ -1,18 +1,19 @@
 import React from "react";
+import { Image } from "@/components/ui/image";
 import ImagePlaceholder from "@/components/ImagePlaceholder";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 
 const BOARD = [
-  { slot: "Slot #D1", name: "Ishaan Pradhan", title: "Director of Technology" },
-  { slot: "Slot #D2", name: "Ayush Ayyagari", title: "Director of Education" },
-  { slot: "Slot #D3", name: "Tanmay Jain", title: "Legal Director" },
-  { slot: "Slot #D4", name: "Om Anish Kadiyam", title: "Director of Marketing" },
+  { slot: "Slot #D1", name: "Om Anish Kadiyam", title: "Director of Marketing", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3a98ddeab_omanishkadiyam.jpg" },
+  { slot: "Slot #D2", name: "Ayush Ayyagari", title: "Director of Education", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3da05ab1d_ayushimage.jpg" },
+  { slot: "Slot #D3", name: "Ishaan Pradhan", title: "Director of Technology", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29f0abc81_ishaanimage.jpg" },
+  { slot: "Slot #D4", name: "Tanmay Jain", title: "Legal Director" },
 ];
 
 const CHAPTER_HEADS = [
   { slot: "Slot #C1", chapter: "Belmont, MA", head: "Ben Qin" },
-  { slot: "Slot #C2", chapter: "Grafton, MA", head: "Joshua Garcia" },
+  { slot: "Slot #C2", chapter: "Grafton, MA", head: "Joshua Garcia", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/afa549487_joshuagarcia.jpg" },
   { slot: "Slot #C3", chapter: "Stoughton, MA", head: "Ethan Tran" },
   { slot: "Slot #C4", chapter: "Torrance, CA", head: "Amogh Urs" },
 ];
@@ -54,7 +55,13 @@ export default function ExecutiveCouncil() {
             {BOARD.map((m, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40">
-                  <ImagePlaceholder slot={m.slot} label={`Board Member — ${m.name}`} ratio="square" className="rounded-none" />
+                  {m.photo ? (
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image src={m.photo} alt={m.name} fittingType="fill" className="h-full w-full" />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder slot={m.slot} label={`Board Member — ${m.name}`} ratio="square" className="rounded-none" />
+                  )}
                   <div className="p-5 text-center">
                     <h3 className="font-display text-lg font-bold tracking-tight text-[#005020]">{m.name}</h3>
                     <p className="mt-1 text-sm font-semibold text-[#0096ff]">{m.title}</p>
@@ -82,7 +89,13 @@ export default function ExecutiveCouncil() {
             {CHAPTER_HEADS.map((c, i) => (
               <Reveal key={i} delay={i * 0.08}>
                 <article className="group h-full overflow-hidden rounded-3xl border border-black/5 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:ring-2 hover:ring-[#b4f859]/40">
-                  <ImagePlaceholder slot={c.slot} label={`Chapter Head — ${c.chapter}`} ratio="square" className="rounded-none" />
+                  {c.photo ? (
+                    <div className="relative aspect-square overflow-hidden">
+                      <Image src={c.photo} alt={c.head} fittingType="fill" className="h-full w-full" />
+                    </div>
+                  ) : (
+                    <ImagePlaceholder slot={c.slot} label={`Chapter Head — ${c.chapter}`} ratio="square" className="rounded-none" />
+                  )}
                   <div className="p-5 text-center">
                     <h3 className="font-display text-lg font-bold tracking-tight text-[#005020]">{c.head}</h3>
                     <p className="mt-1 text-sm font-semibold text-[#0096ff]">{c.chapter}</p>

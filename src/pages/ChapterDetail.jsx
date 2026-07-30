@@ -86,7 +86,7 @@ export default function ChapterDetail() {
               <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-4">
                 {volunteers.map((v, i) => (
                   <Reveal key={v.name} delay={i * 0.05}>
-                    <VolunteerCard name={v.name} role={v.role} />
+                    <VolunteerCard name={v.name} role={v.role} photo={v.photo} />
                   </Reveal>
                 ))}
               </div>
