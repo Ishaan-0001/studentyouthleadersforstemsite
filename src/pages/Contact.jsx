@@ -10,7 +10,7 @@ import Reveal from "@/components/Reveal";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const CONTACT_FORM_URL = "PASTE_YOUR_GOOGLE_CONTACT_FORM_URL_HERE";
+const CONTACT_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeOWAw0GqRYjqRIVSkQUPa1w3J1fjPftqrl5ZWeCHpgH9XqbA/viewform?embedded=true";
 
 export default function Contact() {
   const ready = CONTACT_FORM_URL && !CONTACT_FORM_URL.includes("PASTE_YOUR");
@@ -77,7 +77,6 @@ export default function Contact() {
                       title="SY-STEM Contact Form"
                       src={CONTACT_FORM_URL}
                       className="h-[700px] w-full border-0"
-                      sandbox="allow-scripts allow-forms allow-same-origin allow-popups"
                       loading="lazy"
                     >
                       Loading the contact form…
