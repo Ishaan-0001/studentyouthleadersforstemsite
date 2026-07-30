@@ -9,7 +9,7 @@ import Reveal from "@/components/Reveal";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&v=3";
+const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true&usp=header";
 
 export default function Apply() {
   const ready = VOLUNTEER_FORM_URL && !VOLUNTEER_FORM_URL.includes("PASTE_YOUR");
@@ -44,13 +44,26 @@ export default function Apply() {
               organization. Complete the application below to join us.
             </p>
 
-            <div className="flex flex-col items-center justify-center gap-4 rounded-2xl bg-[#F2FBFF] px-6 py-32 text-center shadow-2xl ring-1 ring-black/5">
-              <p className="font-display text-xl font-bold text-[#005020]">
-                Volunteer application coming soon
-              </p>
-              <p className="max-w-md text-[15px] text-[#555]">
-                The SY-STEM team is finalizing the volunteer application form. Check back soon to apply!
-              </p>
+            <div className="overflow-hidden rounded-2xl bg-white shadow-2xl ring-1 ring-black/5">
+              <iframe
+                title="SY-STEM Volunteer Application"
+                src={VOLUNTEER_FORM_URL}
+                className="h-[900px] w-full border-0"
+                loading="lazy"
+              >
+                Loading the application form…
+              </iframe>
+            </div>
+
+            <div className="mt-8 text-center">
+              <a
+                href={VOLUNTEER_FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
+              >
+                Open Application in New Tab <ExternalLink className="h-4 w-4" />
+              </a>
             </div>
           </Reveal>
         </div>
