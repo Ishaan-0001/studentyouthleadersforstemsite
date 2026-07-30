@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail, ExternalLink, Instagram } from "lucide-react";
-import ImagePlaceholder from "@/components/ImagePlaceholder";
+import { Image } from "@/components/ui/image";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 
@@ -57,8 +57,7 @@ export default function Contact() {
                   </li>
                 </ul>
                 <div className="mt-10">
-                  {/* IMAGE SLOT #24 — Contact: team or event photo */}
-                  <ImagePlaceholder slot="Slot #24" label="Contact — team or event photo" ratio="landscape" />
+                  <Image src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/e7962e039_pic19.jpg" alt="Students testing foil boats in a water bin" fittingType="fill" className="aspect-[3/2] w-full rounded-2xl" />
                 </div>
               </Reveal>
             </div>
