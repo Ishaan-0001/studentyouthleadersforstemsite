@@ -34,10 +34,10 @@ const worldStyle = {
 
 const stateStyle = {
   fillColor: "#0e6b35",
-  fillOpacity: 1,
+  fillOpacity: 0,
   color: "#b4f859",
-  weight: 1.5,
-  opacity: 0.9,
+  weight: 2,
+  opacity: 1,
 };
 
 export default function ChapterMap({ chapters }) {
