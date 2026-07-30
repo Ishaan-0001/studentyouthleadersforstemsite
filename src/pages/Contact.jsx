@@ -39,7 +39,7 @@ export default function Contact() {
         <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-28">
           <div className="grid overflow-hidden rounded-3xl border border-black/5 shadow-xl lg:grid-cols-2">
             {/* LEFT — green info column */}
-            <div className="relative bg-[#0096ff] p-10 text-white lg:p-12">
+            <div className="relative bg-[#0096ff] p-7 text-white sm:p-10 lg:p-12">
               <div className="circuit-pattern absolute inset-0 opacity-40" aria-hidden="true" />
               <Reveal className="relative">
                 <h2 className="font-display text-3xl font-extrabold tracking-tight">Get in Touch</h2>
@@ -47,12 +47,12 @@ export default function Contact() {
                   Reach out and a student leader will get back to you shortly.
                 </p>
                 <ul className="mt-8 space-y-5 text-white/90">
-                  <li className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Mail className="h-5 w-5" /></span>
-                    <a href="mailto:studentyouthleadersforstem@gmail.com" className="stem-focus rounded hover:text-[#b4f859]">studentyouthleadersforstem@gmail.com</a>
+                  <li className="flex items-start gap-3">
+                    <span className="mt-0.5 grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/10"><Mail className="h-5 w-5" /></span>
+                    <a href="mailto:studentyouthleadersforstem@gmail.com" className="stem-focus break-all rounded text-sm hover:text-[#b4f859] sm:text-base">studentyouthleadersforstem@gmail.com</a>
                   </li>
                   <li className="flex items-center gap-3">
-                    <span className="grid h-10 w-10 place-items-center rounded-full bg-white/10"><Instagram className="h-5 w-5" /></span>
+                    <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-white/10"><Instagram className="h-5 w-5" /></span>
                     <a href="https://www.instagram.com/systemlabsusa/" target="_blank" rel="noopener noreferrer" className="stem-focus rounded text-sm hover:text-[#b4f859]">@systemlabsusa</a>
                   </li>
                 </ul>
@@ -63,7 +63,7 @@ export default function Contact() {
             </div>
 
             {/* RIGHT — Google Form embed */}
-            <div className="bg-white p-10 lg:p-12">
+            <div className="bg-white p-7 sm:p-10 lg:p-12">
               <Reveal>
                 <h3 className="font-display text-2xl font-bold tracking-tight text-[#005020]">
                   Send Us a Message
@@ -76,7 +76,7 @@ export default function Contact() {
                     <iframe
                       title="SY-STEM Contact Form"
                       src={CONTACT_FORM_URL}
-                      className="h-[700px] w-full border-0"
+                      className="h-[920px] w-full border-0 sm:h-[760px] lg:h-[700px]"
                       loading="lazy"
                     >
                       Loading the contact form…

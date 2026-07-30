@@ -50,6 +50,15 @@ export default function ChapterMap({ chapters }) {
   const [canadaGeo, setCanadaGeo] = useState(null);
   const [mexicoGeo, setMexicoGeo] = useState(null);
   const [worldGeo, setWorldGeo] = useState(null);
+  const [isMobile, setIsMobile] = useState(
+    typeof window !== "undefined" ? window.innerWidth < 640 : false
+  );
+
+  useEffect(() => {
+    const onResize = () => setIsMobile(window.innerWidth < 640);
+    window.addEventListener("resize", onResize);
+    return () => window.removeEventListener("resize", onResize);
+  }, []);
 
   useEffect(() => {
     fetch(STATES_GEOJSON_URL)
@@ -94,15 +103,15 @@ export default function ChapterMap({ chapters }) {
         }
       `}</style>
       <MapContainer
-        center={[39, -97]}
-        zoom={4}
+        center={isMobile ? [39, -97] : [39, -97]}
+        zoom={isMobile ? 3 : 4}
         minZoom={3}
         maxZoom={8}
         scrollWheelZoom={false}
         zoomControl={false}
         maxBounds={[[5, -170], [72, -45]]}
         maxBoundsViscosity={1}
-        className="stem-map relative h-[460px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl"
+        className="stem-map relative h-[380px] w-full overflow-hidden rounded-3xl border border-white/10 shadow-xl sm:h-[460px]"
         style={{ background: "#0a3d62" }}
       >
         {worldGeo && <GeoJSON data={worldGeo} style={worldStyle} />}
