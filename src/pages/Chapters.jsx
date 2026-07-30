@@ -160,7 +160,7 @@ export default function Chapters() {
                     <Image src={ch.cardImage} alt={`${ch.name} lab photo`} fittingType="fill" className="aspect-[3/2] w-full" />
                   ) : (
                     <div className="flex aspect-[3/2] w-full items-center justify-center bg-[#F2FBFF]">
-                      <Logo className="h-20 w-20 text-[#0096ff]/25" />
+                      <Logo className="h-20 w-20 text-[#005020]/30" />
                     </div>
                   )}
                   <div className="relative p-7">
