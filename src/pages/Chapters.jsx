@@ -15,6 +15,7 @@ export const CHAPTERS = [
     lng: -71.687,
     slot: "Slot #14",
     label: "Chapter — Grafton, MA lab photo",
+    image: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/68cb3c1ad_generated_image.png",
     blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions.",
     description: [
       "The Grafton (MA) chapter serves as the founding chapter of SY-STEM, launched by four dedicated high school students: Ayush Ayyagari, Tanmay Jain, Ishaan Pradhan, and Om Anish Kadiyam.",

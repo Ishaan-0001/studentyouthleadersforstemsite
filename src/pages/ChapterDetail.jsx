@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MapPin } from "lucide-react";
 import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
+import { Image } from "@/components/ui/image";
 import { CtaPill } from "@/components/GreenHero";
 import VolunteerCard from "@/components/VolunteerCard";
 import { CHAPTERS } from "@/pages/Chapters";
@@ -31,15 +32,26 @@ export default function ChapterDetail() {
       {/* Hero header */}
       <section className="relative bg-[#0096ff] text-white">
         <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-4xl px-5 pb-20 pt-36 text-center lg:px-8 lg:pb-24 lg:pt-44">
-          <Reveal>
-            <p className="mb-4 flex items-center justify-center gap-2 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
-              <MapPin className="h-4 w-4" /> {chapter.state}
-            </p>
-            <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
-              {chapter.name} ({chapter.state})
-            </h1>
-          </Reveal>
+        <div className={`relative mx-auto px-5 pb-20 pt-36 lg:px-8 lg:pb-24 lg:pt-44 ${chapter.image ? "max-w-7xl" : "max-w-4xl text-center"}`}>
+          <div className={`grid items-center gap-12 ${chapter.image ? "lg:grid-cols-2" : ""}`}>
+            <Reveal>
+              <div>
+                <p className={`mb-4 flex items-center font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859] ${chapter.image ? "" : "justify-center"}`}>
+                  <MapPin className="h-4 w-4" /> {chapter.state}
+                </p>
+                <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
+                  {chapter.name} ({chapter.state})
+                </h1>
+              </div>
+            </Reveal>
+            {chapter.image && (
+              <Reveal delay={0.1}>
+                <div className="overflow-hidden rounded-3xl shadow-2xl ring-4 ring-white/10">
+                  <Image src={chapter.image} alt={`${chapter.name} lab`} fittingType="fill" className="aspect-[4/3] w-full" />
+                </div>
+              </Reveal>
+            )}
+          </div>
         </div>
       </section>
       <WaveDivider from="#0096ff" to="#FFFFFF" />
