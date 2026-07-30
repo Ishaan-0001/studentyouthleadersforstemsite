@@ -16,6 +16,7 @@ const CHAPTER_HEADS = [
   { slot: "Slot #C2", chapter: "Grafton, MA", head: "Joshua Garcia", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/afa549487_joshuagarcia.jpg" },
   { slot: "Slot #C3", chapter: "Stoughton, MA", head: "Ethan Tran" },
   { slot: "Slot #C4", chapter: "Torrance, CA", head: "Amogh Urs" },
+  { slot: "Slot #C5", chapter: "Los Angeles, CA", head: "Eric Kim" },
 ];
 
 export default function ExecutiveCouncil() {

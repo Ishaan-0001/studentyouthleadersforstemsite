@@ -98,6 +98,25 @@ export const CHAPTERS = [
       { name: "Paulo Mazarkis" },
     ],
   },
+  {
+    slug: "los-angeles",
+    name: "Los Angeles",
+    state: "CA",
+    lat: 34.0522,
+    lng: -118.2437,
+    slot: "Slot #17",
+    label: "Chapter — Los Angeles, CA lab photo",
+    blurb: "Our Los Angeles chapter brings free, hands-on STEM labs to youth across LA and surrounding Southern California communities.",
+    description: [
+      "Our Los Angeles chapter brings free, hands-on STEM labs to youth across LA and surrounding Southern California communities.",
+      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach across one of the most diverse and vibrant regions in the country, inspiring the next generation of thinkers, creators, and problem solvers.",
+    ],
+    volunteers: [
+      { name: "Eric Kim", role: "Chapter Head" },
+      { name: "Emiliano Castillo-Nguyen" },
+      { name: "Austin Futoran" },
+    ],
+  },
 ];
 
 export default function Chapters() {
