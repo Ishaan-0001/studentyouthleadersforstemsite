@@ -5,13 +5,13 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
 const STATES_GEOJSON_URL =
-  "https://raw.githubusercontent.com/PublicaMundi/MappingAPI/master/data/geojson/us-states.json";
+  "https://cdn.jsdelivr.net/gh/PublicaMundi/MappingAPI@master/data/geojson/us-states.json";
 const CANADA_GEOJSON_URL =
-  "https://raw.githubusercontent.com/codeforgermany/click_that_hood/main/public/data/canada.geojson";
+  "https://cdn.jsdelivr.net/gh/codeforgermany/click_that_hood@main/public/data/canada.geojson";
 const MEXICO_GEOJSON_URL =
-  "https://raw.githubusercontent.com/strotgen/mexico-leaflet/3860e51338d905d77a8fcbebcbb1fcdcf6930e43/states.geojson";
+  "https://cdn.jsdelivr.net/gh/strotgen/mexico-leaflet@3860e51338d905d77a8fcbebcbb1fcdcf6930e43/states.geojson";
 const WORLD_GEOJSON_URL =
-  "https://raw.githubusercontent.com/johan/world.geo.json/master/countries.geo.json";
+  "https://cdn.jsdelivr.net/gh/johan/world.geo.json@master/countries.geo.json";
 
 const pinSvg = `
   <svg width="34" height="44" viewBox="0 0 34 44" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter:drop-shadow(0 4px 6px rgba(0,0,0,0.55))">
