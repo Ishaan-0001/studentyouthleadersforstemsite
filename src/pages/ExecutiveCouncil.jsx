@@ -5,10 +5,10 @@ import WaveDivider from "@/components/WaveDivider";
 import Reveal from "@/components/Reveal";
 
 const BOARD = [
-  { slot: "Slot #D1", name: "Ishaan Pradhan", title: "Director of Technology", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29f0abc81_ishaanimage.jpg" },
-  { slot: "Slot #D2", name: "Ayush Ayyagari", title: "Director of Education", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3da05ab1d_ayushimage.jpg" },
-  { slot: "Slot #D3", name: "Om Anish Kadiyam", title: "Director of Marketing", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3a98ddeab_omanishkadiyam.jpg" },
-  { slot: "Slot #D4", name: "Tanmay Jain", title: "Legal Director" },
+  { slot: "Slot #D1", name: "Ishaan Pradhan", title: "Founder · Director of Technology", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29f0abc81_ishaanimage.jpg" },
+  { slot: "Slot #D2", name: "Ayush Ayyagari", title: "Founder · Director of Education", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3da05ab1d_ayushimage.jpg" },
+  { slot: "Slot #D3", name: "Om Anish Kadiyam", title: "Founder · Director of Marketing", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3a98ddeab_omanishkadiyam.jpg" },
+  { slot: "Slot #D4", name: "Tanmay Jain", title: "Founder · Legal Director" },
 ];
 
 const CHAPTER_HEADS = [
@@ -48,7 +48,7 @@ export default function ExecutiveCouncil() {
                 Our Leadership
               </p>
               <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[#005020] sm:text-4xl">
-                Board of Directors
+                Founders
               </h2>
             </div>
           </Reveal>
