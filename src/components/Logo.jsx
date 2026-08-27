@@ -1,17 +1,20 @@
 import React, { useId } from "react";
 
 const LOGO_URL =
-  "https://media.base44.com/images/public/6a66ade4f704833c85945c24/f94a87cab_2transparent.png";
+  "https://media.base44.com/images/public/6a66ade4f704833c85945c24/906a0689e_2transparent.png";
 
 /**
- * Logo — the user's transparent SY-STEM mark, recolored on the fly via an SVG
- * duotone filter. The source artwork is used unchanged; the filter remaps
- * luminance onto a dark-green → lime gradient, so the blue ring + hand/wrench
- * become dark green while the lime gear, circuit and DNA stay green.
+ * Logo — the user's transparent SY-STEM mark. A single feColorMatrix recolors
+ * the light-blue ring + hand/wrench to a saturated green (#00C853) while
+ * leaving the lime gear, circuit and DNA untouched, so the original two-tone
+ * line-art design is preserved exactly.
+ *
+ * Matrix math (sRGB): blue #007BFF (0,123,255) -> (0,200,83); lime #A5FF00
+ * (165,255,0) -> (165,255,0) unchanged; black/transparent preserved via alpha.
  */
 export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
   const rawId = useId();
-  const filterId = `stem-duotone-${rawId.replace(/[:]/g, "")}`;
+  const filterId = `stem-recolor-${rawId.replace(/[:]/g, "")}`;
 
   return (
     <>
@@ -20,14 +23,8 @@ export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
           <filter id={filterId} colorInterpolationFilters="sRGB">
             <feColorMatrix
               type="matrix"
-              values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"
+              values="1 0 0 0 0  0 1 0.302 0 0  2.473 -1.6 1.096 0 0  0 0 0 1 0"
             />
-            <feComponentTransfer>
-              <feFuncR tableValues="0 0 0 0" />
-              <feFuncG tableValues="0 0.314 0.314 0.314" />
-              <feFuncB tableValues="0 0.125 0.125 0.125" />
-              <feFuncA tableValues="0 1" />
-            </feComponentTransfer>
           </filter>
         </defs>
       </svg>
