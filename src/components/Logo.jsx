@@ -8,7 +8,7 @@ import React from "react";
 const LOGO_URL =
   "https://media.base44.com/images/public/6a66ade4f704833c85945c24/e9ec44c09_2transparent.png";
 
-export default function Logo({ className = "h-9 w-auto", title = "SY-STEM" }) {
+export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
   return (
     <img
       src={LOGO_URL}
