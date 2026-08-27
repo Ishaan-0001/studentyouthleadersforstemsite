@@ -12,7 +12,7 @@ export default function Footer() {
               <img
                 src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/e74aef4df_1transparent.png"
                 alt="SY-STEM"
-                className="h-32 w-auto"
+                className="h-36 w-auto"
               />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
