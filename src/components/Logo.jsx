@@ -14,7 +14,10 @@ export default function Logo({ className = "h-9 w-auto", title = "SY-STEM" }) {
       src={LOGO_URL}
       alt={title}
       className={className}
-      style={{ objectFit: "contain" }}
+      style={{
+        objectFit: "contain",
+        filter: "saturate(1.5) drop-shadow(0 2px 4px rgba(0,0,0,0.35))",
+      }}
     />
   );
 }
