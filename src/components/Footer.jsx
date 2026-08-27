@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { Mail, MapPin } from "lucide-react";
-import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -10,7 +9,11 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 text-[#b4f859]">
-              <Logo className="h-20 w-auto" />
+              <img
+                src="https://media.base44.com/images/public/6a66ade4f704833c85945c24/e74aef4df_1transparent.png"
+                alt="SY-STEM"
+                className="h-32 w-auto"
+              />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               Student Youth Leaders for STEM — a non-profit organization dedicated to
