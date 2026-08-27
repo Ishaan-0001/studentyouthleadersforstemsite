@@ -23,9 +23,9 @@ export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
               values="0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0.299 0.587 0.114 0 0  0 0 0 1 0"
             />
             <feComponentTransfer>
-              <feFuncR tableValues="0.039 0.749" />
-              <feFuncG tableValues="0.49 1" />
-              <feFuncB tableValues="0.227 0" />
+              <feFuncR tableValues="0 0 0.749" />
+              <feFuncG tableValues="0.3 0.8 1" />
+              <feFuncB tableValues="0.1 0.27 0" />
               <feFuncA tableValues="0 1" />
             </feComponentTransfer>
           </filter>
