@@ -5,12 +5,12 @@ const LOGO_URL =
 
 /**
  * Logo — the user's transparent SY-STEM mark. A single feColorMatrix recolors
- * the light-blue ring + hand/wrench to a saturated green (#00C853) while
- * leaving the lime gear, circuit and DNA untouched, so the original two-tone
- * line-art design is preserved exactly.
+ * both tones of the original artwork to green so it stays visible on light
+ * backgrounds: the light-blue ring + hand/wrench -> vivid green (#00C853),
+ * and the lime gear, circuit and DNA -> brand dark green (#005020).
  *
  * Matrix math (sRGB): blue #007BFF (0,123,255) -> (0,200,83); lime #A5FF00
- * (165,255,0) -> (165,255,0) unchanged; black/transparent preserved via alpha.
+ * (165,255,0) -> (0,80,32); black/transparent preserved via alpha.
  */
 export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
   const rawId = useId();
@@ -23,7 +23,7 @@ export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
           <filter id={filterId} colorInterpolationFilters="sRGB">
             <feColorMatrix
               type="matrix"
-              values="1 0 0 0 0  0 1 0.302 0 0  2.473 -1.6 1.096 0 0  0 0 0 1 0"
+              values="0 0 0 0 0  -1.06 1 0.302 0 0  0.194 0 0.325 0 0  0 0 0 1 0"
             />
           </filter>
         </defs>
