@@ -78,7 +78,6 @@ export default function Navbar() {
           }`}
         >
           <Logo className="h-[120px] w-auto" />
-          <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">

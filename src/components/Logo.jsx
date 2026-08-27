@@ -1,16 +1,19 @@
 import React, { useId } from "react";
 
 const LOGO_URL =
-  "https://media.base44.com/images/public/6a66ade4f704833c85945c24/906a0689e_2transparent.png";
+  "https://media.base44.com/images/public/6a66ade4f704833c85945c24/e86effcfc_1transparent.png";
 
 /**
- * Logo — the user's transparent SY-STEM mark. A single feColorMatrix recolors
- * both tones of the original artwork to green so it stays visible on light
- * backgrounds: the light-blue ring + hand/wrench -> vivid green (#00C853),
- * and the lime gear, circuit and DNA -> brand dark green (#005020).
+ * Logo — the user's transparent SY-STEM wordmark. The source artwork includes
+ * the "SY-STEM" text + DNA separator as part of the design, so a single
+ * feColorMatrix recolors both tones to green (and the wordmark with them):
+ * light-blue ring + hand/wrench + "SY"/"STEM" text -> vivid green (#00C853),
+ * lime gear, circuit, DNA + the DNA separator -> brand dark green (#005020).
  *
- * Matrix math (sRGB): blue #007BFF (0,123,255) -> (0,200,83); lime #A5FF00
- * (165,255,0) -> (0,80,32); black/transparent preserved via alpha.
+ * Matrix math (sRGB): blue #007AFF (0,122,255) -> (0,200,83); lime #CCFF00
+ * (204,255,0) -> (0,80,32); black/transparent preserved via alpha.
+ *
+ * The previous textless-icon version is preserved in LogoBackup.jsx.
  */
 export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
   const rawId = useId();
@@ -23,7 +26,7 @@ export default function Logo({ className = "h-11 w-auto", title = "SY-STEM" }) {
           <filter id={filterId} colorInterpolationFilters="sRGB">
             <feColorMatrix
               type="matrix"
-              values="0 0 0 0 0  -1.06 1 0.302 0 0  0.194 0 0.325 0 0  0 0 0 1 0"
+              values="0 0 0 0 0  -0.858 1 0.306 0 0  0.157 0 0.325 0 0  0 0 0 1 0"
             />
           </filter>
         </defs>

@@ -10,8 +10,7 @@ export default function Footer() {
         <div className="grid gap-12 md:grid-cols-3">
           <div className="md:col-span-1">
             <Link to="/" className="flex items-center gap-2.5 text-[#b4f859]">
-              <Logo className="h-10 w-auto" />
-              <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
+              <Logo className="h-20 w-auto" />
             </Link>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-white/70">
               Student Youth Leaders for STEM — a non-profit organization dedicated to
