@@ -77,7 +77,7 @@ export default function Navbar() {
             dark ? "text-[#005020]" : "text-white"
           }`}
         >
-          <Logo className="h-9 w-auto" />
+          <Logo className="h-12 w-auto" />
           <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
         </Link>
 
