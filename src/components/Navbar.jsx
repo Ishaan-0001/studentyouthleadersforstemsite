@@ -73,11 +73,11 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
         <Link
           to="/"
-          className={`flex items-center gap-2.5 stem-focus rounded-lg ${
+          className={`flex items-center gap-1.5 stem-focus rounded-lg ${
             dark ? "text-[#005020]" : "text-white"
           }`}
         >
-          <Logo className="h-[72px] w-auto" />
+          <Logo className="h-[104px] w-auto" />
           <span className="font-display text-lg font-extrabold tracking-tight">SY-STEM</span>
         </Link>
 
