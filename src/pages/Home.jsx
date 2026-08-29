@@ -57,6 +57,9 @@ export default function Home() {
               <Link to="/registration" className="inline-flex items-center justify-center rounded-full border-2 border-white/70 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#005020] stem-focus-on-green">
                 Register Now
               </Link>
+              <Link to="/apply" className="inline-flex items-center justify-center rounded-full border-2 border-white/70 px-7 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white hover:text-[#005020] stem-focus-on-green">
+                Sign Up to Volunteer
+              </Link>
             </div>
           </Reveal>
         </div>

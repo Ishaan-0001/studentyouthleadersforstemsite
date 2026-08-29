@@ -136,17 +136,7 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden lg:flex items-center gap-2">
-          <Link
-            to="/apply"
-            className={`rounded-full border px-5 py-2.5 text-sm font-semibold stem-focus transition-colors ${
-              dark
-                ? "border-[#005020] text-[#005020] hover:bg-[#005020] hover:text-white"
-                : "border-white/80 text-white hover:bg-white hover:text-[#005020]"
-            }`}
-          >
-            VOLUNTEER
-          </Link>
+        <div className="hidden lg:block">
           <Link
             to="/registration"
             className="rounded-full bg-[#b4f859] px-5 py-2.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-white"
@@ -207,14 +197,8 @@ export default function Navbar() {
               </div>
             ))}
             <Link
-              to="/apply"
-              className="mt-4 block rounded-full border border-[#005020] px-5 py-3 text-center text-sm font-semibold text-[#005020] stem-focus"
-            >
-              SIGN UP TO VOLUNTEER
-            </Link>
-            <Link
               to="/registration"
-              className="mt-3 block rounded-full bg-[#0096ff] px-5 py-3 text-center text-sm font-semibold text-white stem-focus"
+              className="mt-4 block rounded-full bg-[#0096ff] px-5 py-3 text-center text-sm font-semibold text-white stem-focus"
             >
               REGISTER NOW
             </Link>
