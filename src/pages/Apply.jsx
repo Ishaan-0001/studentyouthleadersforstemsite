@@ -11,6 +11,7 @@ import GoogleFormEmbed from "@/components/GoogleFormEmbed";
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
 const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSdqqImZHlP6cHdR6LzlCbcl1SPEV3_vAt-P4Umw1-RqpHVrXw/viewform?embedded=true";
+const VOLUNTEER_FORM_SHORT_URL = "https://forms.gle/c5DjTa689TSHMtKR7";
 
 export default function Apply() {
   const ready = VOLUNTEER_FORM_URL && !VOLUNTEER_FORM_URL.includes("PASTE_YOUR");
@@ -54,7 +55,7 @@ export default function Apply() {
 
             <div className="mt-8 text-center">
               <a
-                href={VOLUNTEER_FORM_URL}
+                href={VOLUNTEER_FORM_SHORT_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-full border-2 border-[#0096ff] px-7 py-3.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-[#0096ff] hover:text-white"
