@@ -117,6 +117,25 @@ export const CHAPTERS = [
       { name: "Austin Futoran" },
     ],
   },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    state: "TX",
+    lat: 29.4241,
+    lng: -98.4936,
+    slot: "Slot #18",
+    label: "Chapter — San Antonio, TX lab photo",
+    blurb: "Our San Antonio chapter brings free, hands-on STEM labs to youth across San Antonio and surrounding Texas communities.",
+    description: [
+      "Our San Antonio chapter brings free, hands-on STEM labs to youth across San Antonio and surrounding Texas communities.",
+      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach into the heart of Texas, inspiring the next generation of thinkers, creators, and problem solvers.",
+    ],
+    volunteers: [
+      { name: "Diya Senthil", role: "Chapter Head" },
+      { name: "Emma de Hoyos" },
+      { name: "Hailey Prez" },
+    ],
+  },
 ];
 
 export default function Chapters() {

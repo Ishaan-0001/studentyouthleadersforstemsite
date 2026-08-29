@@ -17,6 +17,7 @@ const CHAPTER_HEADS = [
   { slot: "Slot #C3", chapter: "Stoughton, MA", head: "Ethan Tran" },
   { slot: "Slot #C4", chapter: "Torrance, CA", head: "Amogh Urs" },
   { slot: "Slot #C5", chapter: "Los Angeles, CA", head: "Eric Kim" },
+  { slot: "Slot #C6", chapter: "San Antonio, TX", head: "Diya Senthil" },
 ];
 
 export default function ExecutiveCouncil() {

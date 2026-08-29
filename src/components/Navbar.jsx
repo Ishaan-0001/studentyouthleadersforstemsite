@@ -25,6 +25,7 @@ const NAV = [
       { label: "Stoughton (MA)", to: "/chapters/stoughton" },
       { label: "Torrance (CA)", to: "/chapters/torrance" },
       { label: "Los Angeles (CA)", to: "/chapters/los-angeles" },
+      { label: "San Antonio (TX)", to: "/chapters/san-antonio" },
     ],
   },
   { label: "Session Gallery", to: "/gallery" },
