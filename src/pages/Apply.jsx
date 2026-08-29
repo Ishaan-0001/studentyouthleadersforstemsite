@@ -10,7 +10,7 @@ import GoogleFormEmbed from "@/components/GoogleFormEmbed";
 // copy the src URL from the iframe code, and paste it below.
 // It will automatically populate both the iframe and the fallback button.
 // ════════════════════════════════════════════════════════════════════
-const VOLUNTEER_FORM_URL = `https://docs.google.com/forms/d/e/1FAIpQLScqWy_vpXXqZuSo3qAGCTKBe2g1l9PaHnsDiL7KHdq_G9Td_g/viewform?embedded=true&v=${Date.now()}`;
+const VOLUNTEER_FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLScqWy_vpXXqZuSo3qAGCTKBe2g1l9PaHnsDiL7KHdq_G9Td_g/viewform?embedded=true";
 const VOLUNTEER_FORM_SHORT_URL = "https://docs.google.com/forms/d/e/1FAIpQLScqWy_vpXXqZuSo3qAGCTKBe2g1l9PaHnsDiL7KHdq_G9Td_g/viewform";
 
 export default function Apply() {
