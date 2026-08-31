@@ -133,7 +133,7 @@ export const CHAPTERS = [
     volunteers: [
       { name: "Diya Senthil", role: "Chapter Head" },
       { name: "Emma de Hoyos" },
-      { name: "Hailey Prez" },
+      { name: "Astima Paul" },
     ],
   },
 ];
