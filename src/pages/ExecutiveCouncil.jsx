@@ -12,7 +12,7 @@ const BOARD = [
 ];
 
 const CHAPTER_HEADS = [
-  { slot: "Slot #C1", chapter: "Belmont, MA", head: "Ben Qin" },
+  { slot: "Slot #C1", chapter: "Belmont, MA", head: "Ben Qin", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8219740cc_Screenshot2026-09-09at74112PM.png" },
   { slot: "Slot #C2", chapter: "Grafton, MA", head: "Joshua Garcia", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/afa549487_joshuagarcia.jpg" },
   { slot: "Slot #C3", chapter: "Stoughton, MA", head: "Ethan Tran" },
   { slot: "Slot #C4", chapter: "Torrance, CA", head: "Amogh Urs" },

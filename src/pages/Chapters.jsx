@@ -54,7 +54,7 @@ export const CHAPTERS = [
       "This chapter makes it possible for SY-STEM's educational outreach to span across Massachusetts, bringing interactive learning to students across the state.",
     ],
     volunteers: [
-      { name: "Ben Qin", role: "Chapter Head" },
+      { name: "Ben Qin", role: "Chapter Head", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8219740cc_Screenshot2026-09-09at74112PM.png" },
       { name: "Arun Lenhart" },
       { name: "Rocco Choe" },
     ],
