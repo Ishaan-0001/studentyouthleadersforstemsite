@@ -25,6 +25,7 @@ const NAV = [
       { label: "Torrance (CA)", to: "/chapters/torrance" },
       { label: "Los Angeles (CA)", to: "/chapters/los-angeles" },
       { label: "San Antonio (TX)", to: "/chapters/san-antonio" },
+      { label: "Ashburn (VA)", to: "/chapters/ashburn" },
     ],
   },
   { label: "Session Gallery", to: "/gallery" },

@@ -136,6 +136,26 @@ export const CHAPTERS = [
       { name: "Astima Paul" },
     ],
   },
+  {
+    slug: "ashburn",
+    name: "Ashburn",
+    state: "VA",
+    lat: 39.0438,
+    lng: -77.4874,
+    slot: "Slot #19",
+    label: "Chapter — Ashburn, VA lab photo",
+    blurb: "Our Ashburn chapter brings free, hands-on STEM labs to youth across Ashburn, Loudoun County, and surrounding Northern Virginia communities.",
+    description: [
+      "Our Ashburn chapter brings free, hands-on STEM labs to youth across Ashburn, Loudoun County, and surrounding Northern Virginia communities.",
+      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach into Northern Virginia, inspiring the next generation of thinkers, creators, and problem solvers.",
+    ],
+    volunteers: [
+      { name: "Diya Saran", role: "Chapter Head" },
+      { name: "Anjali Ayyagari" },
+      { name: "Yaalini Rajeshkumar" },
+      { name: "Avika Gadhiraju" },
+    ],
+  },
 ];
 
 export default function Chapters() {
