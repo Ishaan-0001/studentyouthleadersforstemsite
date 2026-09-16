@@ -1,7 +1,7 @@
 import { Toaster } from "@/components/ui/toaster"
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClientInstance } from '@/lib/query-client'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import ScrollToTop from './components/ScrollToTop';
 import Layout from "@/components/Layout";
@@ -25,6 +25,7 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route element={<Layout />}>
+            <Route path="/home" element={<Navigate to="/" replace />} />
             <Route path="/" element={<Home />} />
             <Route path="/registration" element={<Registration />} />
             <Route path="/about" element={<About />} />
