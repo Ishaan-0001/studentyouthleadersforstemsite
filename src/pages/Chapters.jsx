@@ -3,6 +3,105 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "@/components/Logo";
 
+export const CHAPTERS = [
+  {
+    slug: "grafton",
+    name: "Grafton",
+    state: "MA",
+    blurb: "STEM learning and leadership in central Massachusetts.",
+    description: [
+      "Grafton brings together students eager to learn, lead, and build community around science, technology, engineering, and math.",
+      "Our chapter creates a welcoming space for projects, mentorship, and local collaboration that helps students grow into confident STEM leaders.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "belmont",
+    name: "Belmont",
+    state: "MA",
+    blurb: "A local STEM hub for curious, motivated students.",
+    description: [
+      "Belmont empowers students to explore STEM ideas through teamwork, mentorship, and hands-on learning experiences.",
+      "The chapter helps young leaders connect with peers and mentors while building real-world confidence in STEM.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "stoughton",
+    name: "Stoughton",
+    state: "MA",
+    blurb: "Helping students turn interest into action.",
+    description: [
+      "Stoughton focuses on building belonging, leadership, and curiosity in STEM through local programming and community support.",
+      "Students are encouraged to lead projects, build skills, and connect with others who share their interests.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "torrance",
+    name: "Torrance",
+    state: "CA",
+    blurb: "STEM leadership in Southern California.",
+    description: [
+      "Torrance brings students together to explore STEM through mentorship, creativity, and leadership opportunities.",
+      "By creating a supportive environment, the chapter helps students develop practical skills and the confidence to lead.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "los-angeles",
+    name: "Los Angeles",
+    state: "CA",
+    blurb: "Connecting students with STEM pathways and leaders.",
+    description: [
+      "Los Angeles creates opportunities for students to discover STEM careers, build technical skills, and grow as community leaders.",
+      "This chapter offers a place for collaboration, mentorship, and engagement with real impact.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "san-antonio",
+    name: "San Antonio",
+    state: "TX",
+    blurb: "Growing the next generation of STEM leaders.",
+    description: [
+      "San Antonio supports students in developing curiosity, confidence, and leadership across STEM disciplines.",
+      "The chapter emphasizes connection, mentorship, and making STEM accessible and exciting for all learners.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "ashburn",
+    name: "Ashburn",
+    state: "VA",
+    blurb: "Inspiring collaboration and leadership in STEM.",
+    description: [
+      "Ashburn offers students a welcoming space to learn, lead, and innovate while building community and confidence.",
+      "Our chapter helps young leaders develop the skills they need to thrive in STEM and beyond.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+  {
+    slug: "akron",
+    name: "Akron",
+    state: "OH",
+    blurb: "Empowering student leadership in STEM communities.",
+    description: [
+      "Akron brings students together to learn, collaborate, and grow into the next generation of STEM leaders.",
+      "The chapter focuses on mentorship, creativity, and building accessible opportunities for all students.",
+    ],
+    volunteers: [],
+    image: "",
+  },
+];
+
 const NAV = [
   { label: "Home", to: "/" },
   {
@@ -225,373 +324,3 @@ export default function Navbar() {
     </header>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
