@@ -1,442 +1,227 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
-import { Image } from "@/components/ui/image";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Logo from "@/components/Logo";
-import WaveDivider from "@/components/WaveDivider";
-import Reveal from "@/components/Reveal";
-import ChapterMap from "@/components/ChapterMap";
 
-export const CHAPTERS = [
+const NAV = [
+  { label: "Home", to: "/" },
   {
-    slug: "grafton",
-    name: "Grafton",
-    state: "MA",
-    lat: 42.2,
-    lng: -71.687,
-    slot: "Slot #14",
-    label: "Chapter — Grafton, MA lab photo",
-    image: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/85d843a68_pic23.jpg",
-    cardImage: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/ff4dfd33d_pic28.jpg",
-    blurb: "Our Grafton chapter serves young learners across Massachusetts with engaging, curiosity-driven lab sessions.",
-    description: [
-      "The Grafton (MA) chapter serves as the founding chapter of SY-STEM, launched by four dedicated high school students: Ayush Ayyagari, Tanmay Jain, Ishaan Pradhan, and Om Anish Kadiyam.",
-      "These students recognized a clear lack of free STEM education opportunities for youth in their surrounding community.",
-      "To address this gap, the founders established SY-STEM as a student-driven organization dedicated to delivering accessible, hands-on STEM experiences that ignite curiosity and passion for science, technology, engineering, and mathematics.",
-      "As the original chapter, Grafton continues to lead by example, inspiring expansion while nurturing curiosity and innovation among young learners.",
-    ],
-    volunteers: [
-      { name: "Joshua Garcia", role: "Chapter Head", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/afa549487_joshuagarcia.jpg" },
-      { name: "Om Anish Kadiyam", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3a98ddeab_omanishkadiyam.jpg" },
-      { name: "Ayush Ayyagari", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/3da05ab1d_ayushimage.jpg" },
-      { name: "Ishaan Pradhan", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/29f0abc81_ishaanimage.jpg" },
-      { name: "Tanmay Jain" },
-      { name: "Dhruv Patel" },
-      { name: "Mohammad Golji" },
-      { name: "Gagan Nallani" },
-      { name: "Riya Vishwashankar" },
-      { name: "Sumedh Malipeddi" },
-      { name: "Santosh Aryan Potti" },
-      { name: "Risha Vishwashankar" },
+    label: "About Us",
+    to: "/about",
+    children: [
+      { label: "Overview", to: "/about" },
+      { label: "Our Mission", to: "/mission" },
+      { label: "Our Labs", to: "/labs" },
     ],
   },
   {
-    slug: "belmont",
-    name: "Belmont",
-    state: "MA",
-    lat: 42.396,
-    lng: -71.179,
-    slot: "Slot #13",
-    label: "Chapter — Belmont, MA lab photo",
-    blurb: "Driven by passionate volunteers, the Belmont chapter expands SY-STEM's mission by providing free, hands-on STEM labs for youth in Belmont, Lexington, Rutherford, and surrounding communities.",
-    description: [
-      "Driven by passionate volunteers, the Belmont chapter expands SY-STEM's mission by providing free, hands-on STEM labs for youth in Belmont, Lexington, Rutherford, and surrounding communities.",
-      "This chapter makes it possible for SY-STEM's educational outreach to span across Massachusetts, bringing interactive learning to students across the state.",
-    ],
-    volunteers: [
-      { name: "Ben Qin", role: "Chapter Head", photo: "https://media.base44.com/images/public/6a66ade4f704833c85945c24/8219740cc_Screenshot2026-09-09at74112PM.png" },
-      { name: "Arun Lenhart" },
-      { name: "Rocco Choe" },
+    label: "Our Chapters",
+    to: "/chapters",
+    children: [
+      { label: "All Chapters", to: "/chapters" },
+      { label: "Grafton (MA)", to: "/chapters/grafton" },
+      { label: "Belmont (MA)", to: "/chapters/belmont" },
+      { label: "Stoughton (MA)", to: "/chapters/stoughton" },
+      { label: "Torrance (CA)", to: "/chapters/torrance" },
+      { label: "Los Angeles (CA)", to: "/chapters/los-angeles" },
+      { label: "San Antonio (TX)", to: "/chapters/san-antonio" },
+      { label: "Ashburn (VA)", to: "/chapters/ashburn" },
+      { label: "Akron (OH)", to: "/chapters/akron" },
     ],
   },
-  {
-    slug: "stoughton",
-    name: "Stoughton",
-    state: "MA",
-    lat: 42.125,
-    lng: -71.103,
-    slot: "Slot #15",
-    label: "Chapter — Stoughton, MA lab photo",
-    blurb: "Powered by passionate volunteers, our Stoughton chapter delivers free, hands-on STEM labs to youth in Stoughton, Canton, Sharon, and the surrounding towns.",
-    description: [
-      "Powered by passionate volunteers, our Stoughton chapter delivers free, hands-on STEM labs to youth in Stoughton, Canton, Sharon, and the surrounding towns.",
-      "The chapter expands SY-STEM's impact across Massachusetts and inspiring the next generation of problem solvers.",
-    ],
-    volunteers: [
-      { name: "Ethan Tran", role: "Chapter Head" },
-      { name: "Henrique Dos Santos" },
-      { name: "Liam Machula" },
-      { name: "Sam Issa" },
-    ],
-  },
-  {
-    slug: "torrance",
-    name: "Torrance",
-    state: "CA",
-    lat: 33.836,
-    lng: -118.343,
-    slot: "Slot #16",
-    label: "Chapter — Torrance, CA lab photo",
-    blurb: "Led by local volunteers who love what they do, our Torrance chapter opens up worlds of discovery with free, hands-on STEM labs for youth in Torrance, Lomita, Carson, and beyond.",
-    description: [
-      "Led by local volunteers who love what they do, our Torrance chapter opens up worlds of discovery with free, hands-on STEM labs for youth in Torrance, Lomita, Carson, and beyond.",
-      "Every workshop helps stretch SY-STEM's reach across Southern California, empowering the thinkers and creators of tomorrow.",
-    ],
-    volunteers: [
-      { name: "Amogh Urs", role: "Chapter Head" },
-      { name: "Aidan Woo" },
-      { name: "Paulo Mazarkis" },
-    ],
-  },
-  {
-    slug: "los-angeles",
-    name: "Los Angeles",
-    state: "CA",
-    lat: 34.0522,
-    lng: -118.2437,
-    slot: "Slot #17",
-    label: "Chapter — Los Angeles, CA lab photo",
-    blurb: "Our Los Angeles chapter brings free, hands-on STEM labs to youth across LA and surrounding Southern California communities.",
-    description: [
-      "Our Los Angeles chapter brings free, hands-on STEM labs to youth across LA and surrounding Southern California communities.",
-      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach across one of the most diverse and vibrant regions in the country, inspiring the next generation of thinkers, creators, and problem solvers.",
-    ],
-    volunteers: [
-      { name: "Eric Kim", role: "Chapter Head" },
-      { name: "Emiliano Castillo-Nguyen" },
-      { name: "Austin Futoran" },
-    ],
-  },
-  {
-    slug: "san-antonio",
-    name: "San Antonio",
-    state: "TX",
-    lat: 29.4241,
-    lng: -98.4936,
-    slot: "Slot #18",
-    label: "Chapter — San Antonio, TX lab photo",
-    blurb: "Our San Antonio chapter brings free, hands-on STEM labs to youth across San Antonio and surrounding Texas communities.",
-    description: [
-      "Our San Antonio chapter brings free, hands-on STEM labs to youth across San Antonio and surrounding Texas communities.",
-      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach into the heart of Texas, inspiring the next generation of thinkers, creators, and problem solvers.",
-    ],
-    volunteers: [
-      { name: "Diya Senthil", role: "Chapter Head" },
-      { name: "Emma de Hoyos" },
-      { name: "Astima Paul" },
-    ],
-  },
-  {
-    slug: "ashburn",
-    name: "Ashburn",
-    state: "VA",
-    lat: 39.0438,
-    lng: -77.4874,
-    slot: "Slot #19",
-    label: "Chapter — Ashburn, VA lab photo",
-    blurb: "Our Ashburn chapter brings free, hands-on STEM labs to youth across Ashburn, Loudoun County, and surrounding Northern Virginia communities.",
-    description: [
-      "Our Ashburn chapter brings free, hands-on STEM labs to youth across Ashburn, Loudoun County, and surrounding Northern Virginia communities.",
-      "Led by dedicated local volunteers, this chapter expands SY-STEM's reach into Northern Virginia, inspiring the next generation of thinkers, creators, and problem solvers.",
-    ],
-    volunteers: [
-      { name: "Diya Saran", role: "Chapter Head" },
-      { name: "Anjali Ayyagari" },
-      { name: "Yaalini Rajeshkumar" },
-      { name: "Avika Gadhiraju" },
-    ],
-  },
-  {
-    slug: "akron",
-    name: "Akron",
-    state: "OH",
-    lat: 41.0814,
-    lng: -81.519,
-    slot: "Slot #20",
-    label: "Chapter — Akron, OH lab photo",
-    blurb: "Our Akron chapter brings free, hands-on STEM learning to students across Akron and surrounding Ohio communities.",
-    description: [
-      "Our Akron chapter brings free, hands-on STEM learning to students across Akron and the surrounding Ohio communities.",
-      "Led by local student volunteers, this chapter helps expand SY-STEM's mission across Northeast Ohio and spark curiosity in the next generation of innovators.",
-    ],
-    volunteers: [
-      { name: "Jihad Ahmad", role: "Chapter Head" },
-      { name: "Min Zaw" },
-      { name: "Lareesha Khabatari" },
-    ],
-  },
+  { label: "Session Gallery", to: "/gallery" },
+  { label: "Executive Council", to: "/executive-council" },
+  { label: "Contact Us", to: "/contact" },
 ];
 
-export default function Chapters() {
+export default function Navbar() {
+  const [scrolled, setScrolled] = useState(false);
+  const [open, setOpen] = useState(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [mobileSub, setMobileSub] = useState(null);
+  const navRef = useRef(null);
+  const location = useLocation();
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setOpen(null);
+    setMobileOpen(false);
+    setMobileSub(null);
+  }, [location.pathname]);
+
+  useEffect(() => {
+    const onClick = (e) => {
+      if (navRef.current && !navRef.current.contains(e.target)) setOpen(null);
+    };
+    document.addEventListener("mousedown", onClick);
+    return () => document.removeEventListener("mousedown", onClick);
+  }, []);
+
+  const dark = scrolled || mobileOpen;
+
   return (
-    <>
-      <section className="relative bg-[#0096ff] text-white">
-        <div className="circuit-pattern absolute inset-0 opacity-60" aria-hidden="true" />
-        <div className="relative mx-auto max-w-7xl px-5 pb-24 pt-36 text-center lg:px-8 lg:pb-28 lg:pt-44">
-          <Reveal>
-            <p className="mb-4 font-display text-xs font-bold uppercase tracking-[0.25em] text-[#b4f859]">
-              All Chapters
-            </p>
-            <h1 className="font-display text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl lg:text-6xl text-balance">
-              Our Chapters
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-white/80">
-              Find a SY-STEM lab near you — and if we're not in your area yet, help us start one.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-      <WaveDivider from="#0096ff" to="#FFFFFF" />
+    <header
+      ref={navRef}
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        dark ? "bg-white shadow-[0_1px_0_rgba(0,0,0,0.06)]" : "bg-transparent"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-3.5 lg:px-8">
+        <Link
+          to="/"
+          className={`flex items-center gap-1.5 stem-focus rounded-lg ${
+            dark ? "text-[#005020]" : "text-white"
+          }`}
+        >
+          <Logo className="h-[132px] w-auto" />
+        </Link>
 
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-5 py-20 lg:px-8 lg:py-24">
-          <Reveal>
-            <div className="text-center">
-              <p className="font-display text-xs font-bold uppercase tracking-[0.25em] text-[#0096ff]">
-                Find Us
-              </p>
-              <h2 className="mt-3 font-display text-3xl font-extrabold tracking-tight text-[#005020] sm:text-4xl">
-                Chapters Across North America
-              </h2>
-              <p className="mx-auto mt-4 max-w-2xl text-[15px] leading-relaxed text-[#555]">
-                Zoom in and tap a pin to see where our student-led labs are making an impact.
-              </p>
-            </div>
-          </Reveal>
-          <div className="mt-10">
-            <ChapterMap chapters={CHAPTERS} />
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-[#F2FBFF]">
-        <div className="mx-auto max-w-7xl px-5 py-24 lg:px-8 lg:py-32">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
-            {CHAPTERS.map((ch, i) => (
-              <Reveal key={ch.slug} delay={i * 0.1}>
-                {/* Destination Card — massive low-opacity location text with floating image + button */}
-                <Link
-                  to={`/chapters/${ch.slug}`}
-                  className="group relative block h-full overflow-hidden rounded-3xl border border-black/5 bg-[#F2FBFF] shadow-sm stem-focus transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl"
+        <ul className="hidden items-center gap-1 lg:flex">
+          {NAV.map((item) => (
+            <li key={item.label} className="relative">
+              {item.children ? (
+                <button
+                  onClick={() => setOpen(open === item.label ? null : item.label)}
+                  onMouseEnter={() => setOpen(item.label)}
+                  className={`flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium stem-focus transition-colors ${
+                    dark
+                      ? "text-[#1A1A1A] hover:text-[#005020]"
+                      : "text-white/90 hover:text-white"
+                  } ${open === item.label ? (dark ? "text-[#005020]" : "text-white") : ""}`}
+                  aria-expanded={open === item.label}
+                  aria-haspopup="true"
                 >
-                  <div className="pointer-events-none absolute right-2 top-0 select-none font-display text-7xl font-extrabold tracking-tight text-[#005020]/[0.07]">
-                    {ch.state}
-                  </div>
-                  {/* IMAGE SLOTS #13–15 — chapter lab photos */}
-                  {ch.cardImage ? (
-                    <Image src={ch.cardImage} alt={`${ch.name} lab photo`} fittingType="fill" className="aspect-[3/2] w-full" />
-                  ) : (
-                    <div className="flex aspect-[3/2] w-full items-center justify-center bg-[#F2FBFF]">
-                      <Logo className="h-20 w-20 opacity-30" />
-                    </div>
-                  )}
-                  <div className="relative p-7">
-                    <h3 className="font-display text-2xl font-bold tracking-tight text-[#005020]">
-                      {ch.name} <span className="text-base font-semibold text-[#888]">({ch.state})</span>
-                    </h3>
-                    <p className="mt-3 text-[15px] leading-relaxed text-[#555]">{ch.blurb}</p>
-                    <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[#005020] transition-colors group-hover:text-[#b4f859]">
-                      Learn More <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </div>
+                  {item.label}
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform ${open === item.label ? "rotate-180" : ""}`} />
+                </button>
+              ) : (
+                <Link
+                  to={item.to}
+                  className={`block rounded-lg px-3 py-2 text-sm font-medium stem-focus transition-colors ${
+                    dark
+                      ? "text-[#1A1A1A] hover:text-[#005020]"
+                      : "text-white/90 hover:text-white"
+                  } ${location.pathname === item.to ? (dark ? "text-[#005020]" : "text-white") : ""}`}
+                >
+                  {item.label}
                 </Link>
-              </Reveal>
+              )}
+
+              {item.children && open === item.label && (
+                <div
+                  onMouseLeave={() => setOpen(null)}
+                  className="absolute left-0 top-full z-50 mt-1 min-w-[200px] overflow-hidden rounded-xl border border-black/5 bg-white py-2 shadow-xl"
+                >
+                  {item.children.map((child) => (
+                    <Link
+                      key={child.label}
+                      to={child.to}
+                      className={`flex items-center gap-2 border-l-2 px-4 py-2 text-sm stem-focus transition-all hover:border-[#b4f859] hover:bg-[#F2FBFF] hover:text-[#005020] ${
+                        location.pathname === child.to
+                          ? "border-[#b4f859] bg-[#F2FBFF] text-[#005020]"
+                          : "border-transparent text-[#1A1A1A]"
+                      }`}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </li>
+          ))}
+        </ul>
+
+        <div className="hidden lg:flex items-center gap-2">
+          <Link
+            to="/apply"
+            className={`whitespace-nowrap rounded-full border px-5 py-2.5 text-sm font-semibold stem-focus transition-colors ${
+              dark
+                ? "border-[#005020] text-[#005020] hover:bg-[#005020] hover:text-white"
+                : "border-white/80 text-white hover:bg-white hover:text-[#005020]"
+            }`}
+          >
+            VOLUNTEER
+          </Link>
+          <Link
+            to="/registration"
+            className="whitespace-nowrap rounded-full bg-[#b4f859] px-5 py-2.5 text-sm font-semibold text-[#005020] stem-focus transition-colors hover:bg-white"
+          >
+            REGISTER NOW
+          </Link>
+        </div>
+
+        <button
+          onClick={() => setMobileOpen((v) => !v)}
+          className={`grid h-10 w-10 place-items-center rounded-lg stem-focus lg:hidden ${
+            dark ? "text-[#1A1A1A]" : "text-white"
+          }`}
+          aria-expanded={mobileOpen}
+          aria-label="Toggle menu"
+        >
+          {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
+
+      {mobileOpen && (
+        <div className="lg:hidden">
+          <div className="max-h-[80vh] overflow-y-auto border-t border-black/5 bg-white px-5 pb-6 pt-2">
+            {NAV.map((item) => (
+              <div key={item.label} className="border-b border-black/5 py-1">
+                {item.children ? (
+                  <>
+                    <button
+                      onClick={() => setMobileSub(mobileSub === item.label ? null : item.label)}
+                      className="flex w-full items-center justify-between py-2.5 text-left text-sm font-semibold text-[#1A1A1A]"
+                      aria-expanded={mobileSub === item.label}
+                    >
+                      {item.label}
+                      <ChevronDown className={`h-4 w-4 transition-transform ${mobileSub === item.label ? "rotate-180" : ""}`} />
+                    </button>
+                    {mobileSub === item.label && (
+                      <div className="ml-3 mb-2 border-l-2 border-[#b4f859] pl-3">
+                        {item.children.map((child) => (
+                          <Link
+                            key={child.label}
+                            to={child.to}
+                            className="block py-2 text-sm text-[#555] stem-focus rounded-md"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    to={item.to}
+                    className="block py-2.5 text-sm font-semibold text-[#1A1A1A]"
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
             ))}
+            <Link
+              to="/apply"
+              className="mt-4 block rounded-full border border-[#005020] px-5 py-3 text-center text-sm font-semibold text-[#005020] stem-focus"
+            >
+              SIGN UP TO VOLUNTEER
+            </Link>
+            <Link
+              to="/registration"
+              className="mt-3 block rounded-full bg-[#0096ff] px-5 py-3 text-center text-sm font-semibold text-white stem-focus"
+            >
+              REGISTER NOW
+            </Link>
           </div>
         </div>
-      </section>
-    </>
+      )}
+    </header>
   );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
